@@ -25,7 +25,7 @@ st.markdown(
 
 
 
-1=sidebar menu, 2=horizontal menu, 3=horizontal menu w/ custom menu
+#1=sidebar menu, 2=horizontal menu, 3=horizontal menu w/ custom menu
 EXAMPLE_NO = 1
 
 
