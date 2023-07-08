@@ -37,6 +37,12 @@ div[data-testid="metric-container"] {
 
 st.markdown(aa, unsafe_allow_html=True)
 
+c1,c2 = st.columns([1.5, 7.5],gap="medium")
+with c1:
+    st.metric(label="c1", value="70 °F")
+with c2:
+    st.metric(label="c2", value="70 °F")
+
 st.metric(label="This is a very very very very very long sentence", value="70 °F")
 st.metric(label="This is a very very very very very long sentence", value="70 °F")
 
