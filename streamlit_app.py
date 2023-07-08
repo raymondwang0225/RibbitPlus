@@ -191,7 +191,8 @@ if selected == "Filter":
         # 创建一个滑动条
         column_value = st.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
         # "Apply Filter" 按钮
-        apply_filter = st.button("Apply Filter")   
+        apply_filter = st.button("Apply Filter")
+        st.markdown(bb, unsafe_allow_html=True)
     with col2:
     # 应用过滤器并获取最终结果
         if apply_filter:
@@ -234,6 +235,6 @@ if selected == "Filter":
                     image = st.image(frog["image_url"],use_column_width = True)
                     st.markdown(caption, unsafe_allow_html=True)   
         
-st.markdown(bb, unsafe_allow_html=True)
+
                
     
