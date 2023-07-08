@@ -3,6 +3,8 @@ from streamlit_option_menu import option_menu
 import pandas as pd
 import plost
 
+st.set_page_config(layout='wide', initial_sidebar_state='expanded')
+
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
