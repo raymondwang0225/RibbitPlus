@@ -26,6 +26,25 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 st.markdown(
     """
 <style>
+div[data-testid="metric-container"] > label[data-testid="stMetricLabel"] > div {
+   overflow-wrap: break-word;
+   white-space: break-spaces;
+   color: red;
+}
+div[data-testid="metric-container"] > label[data-testid="stMetricLabel"] > div p {
+   font-size: 200% !important;
+}
+</style>
+""",
+    unsafe_allow_html=True,
+)
+
+st.metric("Value!", 1.2, 1.0)
+
+
+st.markdown(
+    """
+<style>
 .sidebar .sidebar-content {
     color: #000000;
 }
