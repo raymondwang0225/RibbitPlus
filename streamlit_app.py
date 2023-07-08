@@ -213,7 +213,8 @@ if selected == "Filter":
                     caption = f"[{link_name}]({link_url})"
                     
                     #st.image(frog["image_url"],width=576/4)
-                    image = st.image(frog["image_url"],use_column_width = True)
+                    with st.expander(" "):
+                        image = st.image(frog["image_url"],use_column_width = True)
                     st.markdown(caption, unsafe_allow_html=True)   
         
             
