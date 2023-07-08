@@ -137,11 +137,11 @@ if selected == "Filter":
     st.title("Filter")
     col1, col2 = st.columns([1, 3])
     with col1:
-        desired_backgrounds = st.sidebar.multiselect("Background", backgrounds)
-        desired_clothing = st.sidebar.multiselect("Clothing", clothing)
-        desired_bodies = st.sidebar.multiselect("Body", bodies)
-        desired_mouths = st.sidebar.multiselect("Mouth", mouths)
-        desired_eyes = st.sidebar.multiselect("Eyes", eyes)
+        desired_backgrounds = st.multiselect("Background", backgrounds)
+        desired_clothing = st.multiselect("Clothing", clothing)
+        desired_bodies = st.multiselect("Body", bodies)
+        desired_mouths = st.multiselect("Mouth", mouths)
+        desired_eyes = st.multiselect("Eyes", eyes)
         # 创建一个滑动条
         column_value = st.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
         # "Apply Filter" 按钮
