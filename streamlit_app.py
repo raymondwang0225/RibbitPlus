@@ -135,6 +135,7 @@ if selected == "Filter":
     
 
     st.title("Filter")
+    st.markdown("<hr/>", unsafe_allow_html = True)
     col1, col2 = st.columns([2, 8])
     with col1:
         desired_backgrounds = st.multiselect("Background", backgrounds)
