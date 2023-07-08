@@ -24,8 +24,9 @@ st.markdown("""
         <a class="nav-link" href="https://twitter.com/thedataprof" target="_blank">Weekly Report</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href="javascript: void(0);" onclick="show_weekly_report()">Weekly Report</a>
+        <a class="nav-link" href="https://twitter.com/thedataprof" target="_blank">aaaaa</a>
       </li>
+       
 
     </ul>
   </div>
