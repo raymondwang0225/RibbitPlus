@@ -37,7 +37,7 @@ div[data-testid="metric-container"] {
 
 bb="""
 <style>
-div[data-testid="image"] {
+div[data-testid="image-container"] {
    border-radius: 12px;
 }
 }
