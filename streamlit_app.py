@@ -214,7 +214,7 @@ if selected == "Filter":
                     
                     #st.image(frog["image_url"],width=576/4)
                     
-                    image = st.image(frog["image_url"],use_column_width = True)
+                    image = st.image(frog["image_url"],width = 160,use_column_width = True)
                     st.markdown(caption, unsafe_allow_html=True)   
         
             
