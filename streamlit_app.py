@@ -127,7 +127,7 @@ if selected == "Filter":
     
 
     st.title("Filter")
-    col1, col2 = st.columns([1, 3])
+    col1, col2 = st.columns([1, 5])
     with col1:
         st.multiselect("Background", backgrounds)
         st.multiselect("Clothing", clothing)    
@@ -135,9 +135,9 @@ if selected == "Filter":
         st.multiselect("Mouth", mouths)
         st.multiselect("Eyes", eyes)
         # 创建一个滑动条
-        column_value = st.sidebar.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
+        column_value = st.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
         # "Apply Filter" 按钮
-        apply_filter = st.sidebar.button("Apply Filter")   
+        apply_filter = st.button("Apply Filter")   
     with col2:
         if apply_filter:
             st.write("2222222")
