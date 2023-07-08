@@ -30,6 +30,7 @@ div[data-testid="metric-container"] {
    padding: 5% 5% 5% 10%;
    border-radius: 12px;
    color: rgb(0, 0, 0);
+   overflow-wrap: break-word;
 }
 }
 </style>
