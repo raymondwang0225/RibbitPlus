@@ -37,7 +37,7 @@ div[data-testid="metric-container"] {
 
 st.markdown(aa, unsafe_allow_html=True)
 
-c1,c2 = st.columns([5, 5],gap="medium")
+c1,c2 = st.columns([5, 5])
 with c1:
     st.metric(label="c1", value="70 °F")
 with c2:
