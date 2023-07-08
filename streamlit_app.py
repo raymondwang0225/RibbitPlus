@@ -10,7 +10,16 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-
+st.markdown(
+    """
+<style>
+.sidebar .sidebar-content {
+    color: #000000;
+}
+</style>
+""",
+    unsafe_allow_html=True,
+)
 
 # 1=sidebar menu, 2=horizontal menu, 3=horizontal menu w/ custom menu
 EXAMPLE_NO = 1
