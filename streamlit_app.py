@@ -128,7 +128,7 @@ if selected == "Filter":
     col1, col2, col3 = st.columns(3)
 
     with col1:
-       st.sidebar.multiselect("Background", backgrounds)
+       st.multiselect("Background", backgrounds)
 		  
     with col2:
        with st.expander("🧩 Trait 2", False):
