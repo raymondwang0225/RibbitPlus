@@ -131,17 +131,17 @@ if selected == "Filter":
 		  
     with col2:
        with st.expander("🧩 Trait 2", False):
-            st.checkbox('Trait A')
-            st.checkbox('Trait B')
-            st.checkbox('Trait C')
-            st.checkbox('Trait D')
-            st.checkbox('Trait E')
+            st.checkbox('Trait F')
+            st.checkbox('Trait G')
+            st.checkbox('Trait H')
+            st.checkbox('Trait I')
+            st.checkbox('Trait J')
     
     with col3:
        with st.expander("🧩 Trait 3", False):
-            st.checkbox('Trait A')
-            st.checkbox('Trait B')
-            st.checkbox('Trait C')
-            st.checkbox('Trait D')
-            st.checkbox('Trait E')
+            st.checkbox('Trait K')
+            st.checkbox('Trait L')
+            st.checkbox('Trait M')
+            st.checkbox('Trait N')
+            st.checkbox('Trait O')
    
