@@ -177,7 +177,7 @@ if selected == "Filter":
     
     
     col1, col2 = st.columns([1.5, 7.5],gap="medium")
-    st.markdown(bb, unsafe_allow_html=True)
+    
     with col1:
         desired_backgrounds = st.multiselect("Background", backgrounds)
         desired_clothing = st.multiselect("Clothing", clothing)
@@ -230,8 +230,6 @@ if selected == "Filter":
                     image = st.image(frog["image_url"],use_column_width = True)
                     st.markdown(caption, unsafe_allow_html=True)   
         
-            
-    
-
+st.markdown(bb, unsafe_allow_html=True)
                
     
