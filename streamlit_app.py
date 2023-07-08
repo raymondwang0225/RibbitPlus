@@ -16,7 +16,7 @@ css = """
 st.markdown(css, unsafe_allow_html=True)
 
 # 創建兩個 column
-col_a, col_b = st.beta_columns(2)
+col_a, col_b = st.columns(2)
 
 # 在 col A 中套用 CSS 樣式
 with col_a:
