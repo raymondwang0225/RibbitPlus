@@ -119,9 +119,21 @@ if selected == "Contact":
     st.title(f"You have selected {selected}")
 if selected == "Filter":
     st.title("Filter")
-    with st.expander("🧩 Trait1", False):
-        st.checkbox('Trait A')
-        st.checkbox('Trait B')
-        st.checkbox('Trait C')
-        st.checkbox('Trait D')
-        st.checkbox('Trait E')
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+		with st.expander("🧩 Trait1", False):
+			st.checkbox('Trait A')
+        	st.checkbox('Trait B')
+        	st.checkbox('Trait C')
+        	st.checkbox('Trait D')
+        	st.checkbox('Trait E')
+    
+    with col2:
+       st.header("A dog")
+       st.image("https://static.streamlit.io/examples/dog.jpg")
+    
+    with col3:
+       st.header("An owl")
+       st.image("https://static.streamlit.io/examples/owl.jpg")
+   
