@@ -33,13 +33,6 @@ div[data-testid="metric-container"] {
    color: rgb(30, 103, 119);
    overflow-wrap: break-word;
 }
-
-/* breakline for metric text         */
-div[data-testid="metric-container"] > label[data-testid="stMetricLabel"] > div {
-   overflow-wrap: break-word;
-   white-space: break-spaces;
-   color: red;
-}
 </style>
 """
 , unsafe_allow_html=True)
