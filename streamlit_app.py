@@ -1,29 +1,28 @@
 import streamlit as st
-import pandas as pd
 
-st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
+# 定義觸發的函數
+def on_link_click():
+    st.write('連結被點擊了')
+    # 在此處加入您希望觸發的 Streamlit 邏輯
 
-st.markdown("""
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #3498DB;">
-  <a class="navbar-brand" href="https://youtube.com/dataprofessor" target="_blank">Data Professor</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link disabled" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://youtube.com/dataprofessor" target="_blank">YouTube</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://twitter.com/thedataprof" target="_blank">Twitter</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://twitter.com/thedataprof" target="_blank">aaaaaa</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-""", unsafe_allow_html=True)
+# 顯示 HTML 元素
+html_code = '''
+<li class="nav-item active">
+    <a class="nav-link disabled" href="javascript:void(0);" onclick="triggerLinkClick()">Home <span class="sr-only">(current)</span></a>
+</li>
+<script>
+    function triggerLinkClick() {
+        // 呼叫 Streamlit 函數
+        StreamlitApp._enqueueSctiptCall('on_link_click', [], {});
+    }
+</script>
+'''
+st.write(html_code, unsafe_allow_html=True)
+
+# 呼叫觸發的函數
+if 'on_link_click' in st.session_state:
+    on_link_click()
+    del st.session_state.on_link_click
+
+
+
