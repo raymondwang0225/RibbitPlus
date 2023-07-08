@@ -43,13 +43,38 @@ def streamlit_menu(example=1):
                 menu_icon="bi bi-arrow-up-left-square",  # optional
                 default_index=0,  # optional
             )
-            with st.expander("🧩 COMPONENTS", True):
-                page.item("Ace editor", components.ace_editor)
-                page.item("Disqus", components.disqus)
-                page.item("Elements⭐", components.elements)
-                page.item("Pandas profiling", components.pandas_profiling)
-                page.item("Quill editor", components.quill_editor)
-                page.item("React player", components.react_player)
+            with st.expander("🧩 Trait1", False):
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+             with st.expander("🧩 Trait2", False):
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
+                st.checkbox('Traits')
         return selected
 
     if example == 2:
