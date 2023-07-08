@@ -5,24 +5,18 @@ def on_link_click():
     st.write('連結被點擊了')
     # 在此處加入您希望觸發的 Streamlit 邏輯
 
-# 顯示 HTML 元素
-html_code = '''
-<li class="nav-item active">
-    <a class="nav-link disabled" href="javascript:void(0);" onclick="triggerLinkClick()">Home <span class="sr-only">(current)</span></a>
-</li>
-<script>
-    function triggerLinkClick() {
-        // 呼叫 Streamlit 函數
-        StreamlitApp._enqueueSctiptCall('on_link_click', [], {});
-    }
-</script>
+# 顯示 Streamlit 按鈕，設定樣式為看起來像連結
+link_style = '''
+    background: none;
+    border: none;
+    padding: 0;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
 '''
-st.write(html_code, unsafe_allow_html=True)
 
-# 呼叫觸發的函數
-if 'on_link_click' in st.session_state:
-    on_link_click()
-    del st.session_state.on_link_click
+if st.button('Home', help='連結', unsafe_allow_html=True, key='link_button', on_click=on_link_click):
+    pass  # 無需執行任何操作，僅為確保按鈕顯示
 
-
-
+# 透過 CSS 設定按鈕樣式
+st.markdown(f'<style>{link_style}</style>', unsafe_allow_html=True)
