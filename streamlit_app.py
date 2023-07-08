@@ -43,22 +43,7 @@ def streamlit_menu(example=1):
                 menu_icon="bi bi-arrow-up-left-square",  # optional
                 default_index=0,  # optional
             )
-            with st.expander("🧩 Trait1", False):
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
+            
             
         return selected
 
@@ -132,3 +117,11 @@ if selected == "Projects":
     st.title(f"You have selected {selected}")
 if selected == "Contact":
     st.title(f"You have selected {selected}")
+if selected == "Filter":
+    st.title("Filter")
+    with st.expander("🧩 Trait1", False):
+        st.checkbox('Trait A')
+        st.checkbox('Trait B')
+        st.checkbox('Trait C')
+        st.checkbox('Trait D')
+        st.checkbox('Trait E')
