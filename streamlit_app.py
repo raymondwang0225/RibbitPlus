@@ -45,6 +45,7 @@ div[data-testid="metric-container"] > label[data-testid="stMetricLabel"] > div {
 , unsafe_allow_html=True)
 
 st.metric(label="This is a very very very very very long sentence", value="70 °F")
+st.metric(label="This is a very very very very very long sentence", value="70 °F")
 
 
 
