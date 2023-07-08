@@ -10,6 +10,15 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
+
+# 获取当前页面的宽度
+page_width = st.beta_get_page_config().get("theme").get("wideMode")
+
+# 创建容器
+container = st.container()
+
+# 设置容器的宽度为页面的宽度
+container.width = page_width
 # 1=sidebar menu, 2=horizontal menu, 3=horizontal menu w/ custom menu
 EXAMPLE_NO = 2
 
