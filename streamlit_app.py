@@ -43,7 +43,7 @@ eyes = ["Dank Shades", "Happy", "Visor", "Monocle", "none", "Frown", "Powerful",
 
 
 #1=sidebar menu, 2=horizontal menu, 3=horizontal menu w/ custom menu
-EXAMPLE_NO = 1
+EXAMPLE_NO = 2
 
 
 def streamlit_menu(example=1):
@@ -66,9 +66,9 @@ def streamlit_menu(example=1):
         st.title("Ribbit Plus")
         selected = option_menu(
             menu_title=None,  # required
-            options=["Home", "Projects", "Contact"],  # required
-            icons=["house", "book", "envelope"],  # optional
-            menu_icon="cast",  # optional
+            options=["Home", "Projects", "Contact","Filter","Weekly Report"],  # required
+            icons=["house", "book", "envelope","bi bi-chat-square-dots-fill","bi bi-archive"],  # optional
+            menu_icon="bi bi-arrow-up-left-square",  # optional
             default_index=0,  # optional
             orientation="horizontal",
         )
