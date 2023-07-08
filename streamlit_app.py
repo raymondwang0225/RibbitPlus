@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-
+"""
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
@@ -9,7 +9,7 @@ hide_st_style = """
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
-
+"""
 st.markdown(
     """
 <style>
