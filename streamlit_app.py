@@ -23,6 +23,9 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+with open('style.css') as f:
+  st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
 # 1=sidebar menu, 2=horizontal menu, 3=horizontal menu w/ custom menu
 EXAMPLE_NO = 1
 
@@ -80,9 +83,6 @@ def streamlit_menu(example=1):
 selected = streamlit_menu(example=EXAMPLE_NO)
 
 if selected == "Home":
-    with open('style.css') as f:
-     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-
     st.title(f"You have selected {selected}")
 if selected == "Projects":
     st.title(f"You have selected {selected}")
