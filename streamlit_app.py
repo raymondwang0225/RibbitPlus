@@ -32,7 +32,7 @@ def streamlit_menu(example=1):
         st.title("Ribbit Plus")
         selected = option_menu(
             menu_title=None,  # required
-            options=["Home", "Projects", "Contact"],  # required
+            options=["Home", "Projects", "Contact","Contact","Contact","Contact","Contact","Contact"],  # required
             icons=["house", "book", "envelope"],  # optional
             menu_icon="cast",  # optional
             default_index=0,  # optional
