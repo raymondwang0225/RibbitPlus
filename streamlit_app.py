@@ -36,17 +36,17 @@ div[data-testid="metric-container"] {
 """
 
 
-bb="""
+bb='''
 <style>
-div[data-testid="container"] {
-   border: 1px solid rgba(255, 255, 255, 0.25);
-   padding: 20px 20px 20px 20px;
-   border-radius: 12px;
-   color: rgb(255, 255, 255);
-}
-}
+    section.main>div {
+        padding-bottom: 1rem;
+    }
+    [data-testid="column"]>div>div>div>div>div {
+        overflow: auto;
+        height: 70vh;
+    }
 </style>
-"""
+'''
 
 st.markdown(aa, unsafe_allow_html=True)
 
