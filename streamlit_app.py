@@ -41,7 +41,11 @@ bb='''
     section.main>div {
         padding-bottom: 1rem;
     }
-    [data-testid="column"]>div>div>div>div>div {
+    [data-testid="column"] {
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        padding: 20px 20px 20px 20px;
+        border-radius: 12px;
+        color: rgb(255, 255, 255);
         overflow: auto;
         height: 70vh;
     }
