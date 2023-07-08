@@ -2,6 +2,14 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import pandas as pd
 import plost
+import json;
+
+
+with open('bitcoin_frogs_items.json') as f:
+    frog_data = json.load(f)
+
+filtered_frogs = []
+
 
 st.set_page_config(layout='wide', initial_sidebar_state='expanded')
 
@@ -127,7 +135,7 @@ if selected == "Filter":
     
 
     st.title("Filter")
-    col1, col2 = st.columns([1, 5])
+    col1, col2 = st.columns([1, 3])
     with col1:
         st.multiselect("Background", backgrounds)
         st.multiselect("Clothing", clothing)    
@@ -139,14 +147,49 @@ if selected == "Filter":
         # "Apply Filter" 按钮
         apply_filter = st.button("Apply Filter")   
     with col2:
+    # 应用过滤器并获取最终结果
         if apply_filter:
-            st.write("2222222")
+            
+            # 根据条件过滤人物
+            filtered_frogs = [frog for frog in frog_data if
+                            (not desired_backgrounds or frog["background"]  in desired_backgrounds) and
+                            (not desired_bodies or frog["body"] in desired_bodies) and
+                            (not desired_clothing or frog["clothing"] in desired_clothing) and  
+                            (not desired_mouths or frog["mouth"] in desired_mouths) and
+                            (not desired_eyes or frog["eyes"] in desired_eyes)]
 
-                       
-    
-       
+            # 显示符合条件的人物
+            #st.write("Filtered Bitcoin Frogs  :   [ " + str(len(filtered_frogs)) + " ] Frogs")
+            st.write("Result  :   [ " + str(len(filtered_frogs)) + " ] Frogs")
+            for frog in filtered_frogs:
+                frog["image_url"] = 'https://ordiscan.com/content/'+str(frog["inscription_id"])
+                frog["me_link"] = "https://magiceden.io/ordinals/item-details/" + str(frog["inscription_id"])
+                #st.write(frog)
+                #st.image('https://ordiscan.com/content/'+str(frog["inscription_id"]), caption=frog["item_name"],width=576/2)
+
+        
+            
+            # 定义每列的宽度
+            col_width = column_value
+            
+            # 间距的像素值
+            #spacing = 200  
+
+            # 创建网格布局
+            cols = st.columns(col_width)
+            # 显示图片
+            for i, frog in enumerate(filtered_frogs):
+                with cols[i % col_width]:
+                    link_url = frog["me_link"]
+                    link_name = frog["item_name"] 
+                    caption = f"[{link_name}]({link_url})"
+                    
+                    #st.image(frog["image_url"],width=576/4)
+                    image = st.image(frog["image_url"],use_column_width = True)
+                    st.markdown(caption, unsafe_allow_html=True)   
+        
             
     
 
                
-   
+    st.markdown("<hr/>", unsafe_allow_html = True)
