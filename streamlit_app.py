@@ -37,11 +37,18 @@ st.markdown("""
 </nav>
 """, unsafe_allow_html=True)
 
+'''
 st.markdown('''# **Version Test**
 A simple template
 ''')
 
 st.header('**Version Test**')
-
-
-
+'''
+# 定義觸發的函數
+def show_weekly_report():
+    # 在此處加入您想要的內容變化
+    st.write('這是 Weekly Report 的內容')
+# 呼叫觸發的函數
+if 'show_weekly_report' in st.session_state:
+    show_weekly_report()
+    del st.session_state.show_weekly_report
