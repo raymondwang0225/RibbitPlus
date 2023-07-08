@@ -35,8 +35,6 @@ div[data-testid="metric-container"] {
 </style>
 """
 
-
-
 st.markdown(aa, unsafe_allow_html=True)
 
 c1,c2 = st.columns([5, 5])
@@ -134,19 +132,18 @@ if selected == "Home":
     stocks = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/stocks_toy.csv')
     
     c1, c2 = st.columns((7,3))
-    with st.container:
-        with c1:
-            st.markdown('### Heatmap')
-            plost.time_hist(
-            data=seattle_weather,
-            date='date',
-            x_unit='week',
-            y_unit='day',
-            color="2e8eee",
-            aggregate='median',
-            legend=None,
-            height=345,
-            use_container_width=True)
+    with c1:
+        st.markdown('### Heatmap')
+        plost.time_hist(
+        data=seattle_weather,
+        date='date',
+        x_unit='week',
+        y_unit='day',
+        color="2e8eee",
+        aggregate='median',
+        legend=None,
+        height=345,
+        use_container_width=True)
     with c2:
         st.markdown('### Donut chart')
         plost.donut_chart(
@@ -155,18 +152,6 @@ if selected == "Home":
             color='company',
             legend='bottom', 
             use_container_width=True)
-        
-st.markdown(
-    """
-<style>
-    div[data-testid="stVerticalBlock"] div[style*="flex-direction: column;"] div[data-testid="stVerticalBlock"] {
-        border: 1px solid red;
-    }
-</style>
-""",
-    unsafe_allow_html=True,
-)
-
 if selected == "Projects":
     st.title(f"You have selected {selected}")
 if selected == "Contact":
