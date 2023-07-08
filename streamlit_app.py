@@ -96,7 +96,7 @@ if selected == "Home":
         date='date',
         x_unit='week',
         y_unit='day',
-        color=time_hist_color,
+        color="2e8eee",
         aggregate='median',
         legend=None,
         height=345,
@@ -105,7 +105,7 @@ if selected == "Home":
         st.markdown('### Donut chart')
         plost.donut_chart(
             data=stocks,
-            theta=donut_theta,
+            theta='q2',
             color='company',
             legend='bottom', 
             use_container_width=True)
