@@ -122,18 +122,26 @@ if selected == "Filter":
     col1, col2, col3 = st.columns(3)
 
     with col1:
-		with st.expander("🧩 Trait1", False):
-			st.checkbox('Trait A')
-        	st.checkbox('Trait B')
-        	st.checkbox('Trait C')
-        	st.checkbox('Trait D')
-        	st.checkbox('Trait E')
-    
+       with st.expander("🧩 Trait 1", False):
+            st.checkbox('Trait A')
+            st.checkbox('Trait B')
+            st.checkbox('Trait C')
+            st.checkbox('Trait D')
+            st.checkbox('Trait E')
+		  
     with col2:
-       st.header("A dog")
-       st.image("https://static.streamlit.io/examples/dog.jpg")
+       with st.expander("🧩 Trait 2", False):
+            st.checkbox('Trait A')
+            st.checkbox('Trait B')
+            st.checkbox('Trait C')
+            st.checkbox('Trait D')
+            st.checkbox('Trait E')
     
     with col3:
-       st.header("An owl")
-       st.image("https://static.streamlit.io/examples/owl.jpg")
+       with st.expander("🧩 Trait 3", False):
+            st.checkbox('Trait A')
+            st.checkbox('Trait B')
+            st.checkbox('Trait C')
+            st.checkbox('Trait D')
+            st.checkbox('Trait E')
    
