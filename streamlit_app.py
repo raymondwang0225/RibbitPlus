@@ -27,7 +27,7 @@ aa="""
 <style>
 div[data-testid="metric-container"] {
    border: 1px solid rgba(255, 255, 255, 0.5);
-   padding: 5% 5% 5% 10%;
+   padding: 5% 5% 5% 5%;
    border-radius: 12px;
    color: rgb(255, 255, 255);
 }
