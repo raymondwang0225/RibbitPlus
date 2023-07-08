@@ -125,24 +125,19 @@ if selected == "Contact":
     st.title(f"You have selected {selected}")
 if selected == "Filter":
     st.title("Filter")
-    col1, col2, col3 = st.columns(3)
-
-    with col1:
-       st.multiselect("Background", backgrounds)
-		  
-    with col2:
-       with st.expander("🧩 Trait 2", False):
-            st.checkbox('Trait F')
-            st.checkbox('Trait G')
-            st.checkbox('Trait H')
-            st.checkbox('Trait I')
-            st.checkbox('Trait J')
+    col1, col2, col3, col4, col5 = st.columns(5)
+    with st.expander("🧩 Trait Filter", False):
+        with col1:
+            st.multiselect("Background", backgrounds)
+                
+        with col2:
+            st.multiselect("Clothing", clothing)               
     
-    with col3:
-       with st.expander("🧩 Trait 3", False):
-            st.checkbox('Trait K')
-            st.checkbox('Trait L')
-            st.checkbox('Trait M')
-            st.checkbox('Trait N')
-            st.checkbox('Trait O')
-   
+        with col3:
+            st.multiselect("Body", bodies)    
+        
+        with col4:
+            st.multiselect("Mouth", mouths) 
+
+        with col5:
+            st.multiselect("Eyes", eyes)           
