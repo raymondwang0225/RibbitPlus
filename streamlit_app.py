@@ -124,12 +124,8 @@ if selected == "Projects":
 if selected == "Contact":
     st.title(f"You have selected {selected}")
 if selected == "Filter":
-    # 创建一个滑动条
-    column_value = st.sidebar.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
-
-    # "Apply Filter" 按钮
-    apply_filter = st.sidebar.button("Apply Filter")
     
+
     st.title("Filter")
     col1, col2, col3, col4, col5 = st.columns(5)
     with st.expander("🧩 Trait Filter", False):
@@ -146,5 +142,10 @@ if selected == "Filter":
             st.multiselect("Mouth", mouths) 
 
         with col5:
-            st.multiselect("Eyes", eyes)           
+            st.multiselect("Eyes", eyes)
+    # 创建一个滑动条
+    column_value = st.sidebar.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
+
+    # "Apply Filter" 按钮
+    apply_filter = st.sidebar.button("Apply Filter")           
     st.markdown("<hr/>", unsafe_allow_html = True)
