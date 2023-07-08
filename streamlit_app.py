@@ -26,6 +26,12 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+# 属性选项
+backgrounds = ["Brown", "Red", "Olive", "Grey", "Pink", "Dark Blue", "Orange", "Blue", "Green", "Light Blue", "Bitcoin Orange", "Black", "Yellow"]
+clothing = ["Prison Jumpsuit", "Green Hoodie", "Businessman", "Bling", "Wizard Robe", "None", "Leather Jacket", "Leather Dust Coat", "Red Hoodie", "Elvis", "Jersey", "Orange Checkered", "Blue Jacket", "Fur Coat", "23 TShirt", "Black Vest", "Karate Outfit", "Black Hoodie", "Purple Checkered", "Kings Robes", "Vest and Shirt", "Ninja", "Clown", "Priest", "Red Overalls", "Grey Suit", "Blue Hoodie", "Hawaiian", "Hitman", "Yellow Hoodie", "Bowtie", "Bitcoin Shirt", "Gentlemans Suit", "Spartan"]
+bodies = ["Spotted", "Electro", "Dark Red", "Green", "Tron"]
+mouths = ["Bitcoin Pizza", "None", "Magicians Moustache", "Bubblegum", "Dictators Moustache", "Cigar", "Tongue Out", "Clown Nose", "Big Moustache", "Pipe"]
+eyes = ["Dank Shades", "Happy", "Visor", "Monocle", "none", "Frown", "Powerful", "Golden Sunglasses", "Nakamoto Glasses", "Angry", "3D Glasses", "Purple Cosmic Eyes"]
 
 
 #1=sidebar menu, 2=horizontal menu, 3=horizontal menu w/ custom menu
@@ -122,12 +128,7 @@ if selected == "Filter":
     col1, col2, col3 = st.columns(3)
 
     with col1:
-       with st.expander("🧩 Trait 1", False):
-            st.checkbox('Trait A')
-            st.checkbox('Trait B')
-            st.checkbox('Trait C')
-            st.checkbox('Trait D')
-            st.checkbox('Trait E')
+       desired_backgrounds = st.sidebar.multiselect("Background", backgrounds)
 		  
     with col2:
        with st.expander("🧩 Trait 2", False):
