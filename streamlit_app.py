@@ -135,7 +135,7 @@ if selected == "Filter":
     
 
     st.title("Filter")
-    col1, col2 = st.columns([1, 9])
+    col1, col2 = st.columns([2, 8])
     with col1:
         desired_backgrounds = st.multiselect("Background", backgrounds)
         desired_clothing = st.multiselect("Clothing", clothing)
