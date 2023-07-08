@@ -23,21 +23,21 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 
-aa= div[data-testid="metric-container"] {
+aa="""
+<style>
+div[data-testid="metric-container"] {
    background-color: rgba(28, 131, 225, 0.1);
    border: 1px solid rgba(28, 131, 225, 0.1);
    padding: 5% 5% 5% 10%;
    border-radius: 5px;
    color: rgb(30, 103, 119);
    overflow-wrap: break-word;
-
-st.markdown("""
-<style>
-    aa
+}
 }
 </style>
 """
-, unsafe_allow_html=True)
+
+st.markdown(aa, unsafe_allow_html=True)
 
 st.metric(label="This is a very very very very very long sentence", value="70 °F")
 st.metric(label="This is a very very very very very long sentence", value="70 °F")
