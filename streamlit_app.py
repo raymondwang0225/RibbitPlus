@@ -214,7 +214,7 @@ if selected == "Filter":
                     
                     #st.image(frog["image_url"],width=576/4)
                     
-                    image = st.image(frog["image_url"],width = 160,use_column_width = True)
+                    image = st.image(frog["image_url"],use_column_width = True)
                     st.markdown(caption, unsafe_allow_html=True)   
         
             
@@ -222,3 +222,20 @@ if selected == "Filter":
 
                
     
+st.write("text outside the container")
+with st.container():
+    st.write("text inside the container")
+
+st.write("More text outside the container")
+
+
+st.markdown(
+    """
+<style>
+    div[data-testid="stVerticalBlock"] div[style*="flex-direction: column;"] div[data-testid="stVerticalBlock"] {
+        border: 1px solid red;
+    }
+</style>
+""",
+    unsafe_allow_html=True,
+)
