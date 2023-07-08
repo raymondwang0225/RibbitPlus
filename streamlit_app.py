@@ -23,27 +23,22 @@ st.markdown("""
        <li class="nav-item">
         <a class="nav-link" href="https://twitter.com/thedataprof" target="_blank">Weekly Report</a>
       </li>
-      <li class="nav-item">
-    <a class="nav-link" href="javascript: void(0);" onclick="triggerWeeklyReport()">Weekly Report</a>
-</li>
-<script>
-    function triggerWeeklyReport() {
-        // 呼叫 Streamlit 函數
-        show_weekly_report()
-    }
-</script>
+       <li class="nav-item">
+        <a class="nav-link" href="javascript: void(0);" onclick="show_weekly_report()">Weekly Report</a>
+      </li>
+
     </ul>
   </div>
 </nav>
 """, unsafe_allow_html=True)
 
-'''
+"""
 st.markdown('''# **Version Test**
 A simple template
 ''')
 
 st.header('**Version Test**')
-'''
+"""
 # 定義觸發的函數
 def show_weekly_report():
     # 在此處加入您想要的內容變化
