@@ -25,7 +25,7 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 
 st.markdown("""
 <style>
-div[data-testid="metric-container"] {
+div[data-testid="etric-container"] {
    background-color: rgba(28, 131, 225, 0.1);
    border: 1px solid rgba(28, 131, 225, 0.1);
    padding: 5% 5% 5% 10%;
