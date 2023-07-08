@@ -29,6 +29,7 @@ def streamlit_menu(example=1):
 
     if example == 2:
         # 2. horizontal menu w/o custom style
+        st.title("Ribbit Plus")
         selected = option_menu(
             menu_title=None,  # required
             options=["Home", "Projects", "Contact"],  # required
