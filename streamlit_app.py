@@ -137,7 +137,8 @@ if selected == "Filter":
             st.multiselect("Body", bodies)    
         
         with col4:
-            st.multiselect("Mouth", mouths) 
+            st.multiselect("Mouth", mouths)
+    st.markdown("<hr/>", unsafe_allow_html = True)
 
         with col5:
             st.multiselect("Eyes", eyes)           
