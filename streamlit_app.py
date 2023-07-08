@@ -23,14 +23,25 @@ st.markdown("""
        <li class="nav-item">
         <a class="nav-link" href="https://twitter.com/thedataprof" target="_blank">Weekly Report</a>
       </li>
+      <li class="nav-item">
+    <a class="nav-link" href="javascript: void(0);" onclick="triggerWeeklyReport()">Weekly Report</a>
+</li>
+<script>
+    function triggerWeeklyReport() {
+        // 呼叫 Streamlit 函數
+        StreamlitApp._enqueueSctiptCall('show_weekly_report', [], {});
+    }
+</script>
     </ul>
   </div>
 </nav>
 """, unsafe_allow_html=True)
 
 st.markdown('''# **Version Test**
-A simple template*.
+A simple template
 ''')
 
 st.header('**Version Test**')
+
+
 
