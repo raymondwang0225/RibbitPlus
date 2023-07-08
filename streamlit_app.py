@@ -59,22 +59,7 @@ def streamlit_menu(example=1):
                 st.checkbox('Traits')
                 st.checkbox('Traits')
                 st.checkbox('Traits')
-             with st.expander("🧩 Trait2", False):
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
-                st.checkbox('Traits')
+            
         return selected
 
     if example == 2:
