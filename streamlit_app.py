@@ -5,7 +5,7 @@ st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootst
 
 st.markdown("""
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #3498DB;">
-  <a class="navbar-brand" href="https://youtube.com/dataprofessor" target="_blank">Ribbit Plus</a>
+  <a class="navbar-brand" href="https://youtube.com/dataprofessor" target="_blank">Data Professor</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -15,33 +15,15 @@ st.markdown("""
         <a class="nav-link disabled" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="https://youtube.com/dataprofessor" target="_blank">Analytics</a>
+        <a class="nav-link" href="https://youtube.com/dataprofessor" target="_blank">YouTube</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="https://twitter.com/thedataprof" target="_blank">Filter</a>
+        <a class="nav-link" href="https://twitter.com/thedataprof" target="_blank">Twitter</a>
       </li>
-       <li class="nav-item">
-        <a class="nav-link" href="https://twitter.com/thedataprof" target="_blank">Weekly Report</a>
+      <li class="nav-item">
+        <a class="nav-link" href="https://twitter.com/thedataprof" target="_blank">aaaaaa</a>
       </li>
-       <li class="nav-item">
-        <a class="nav-link" href="https://twitter.com/thedataprof" target="_blank">aaaaa</a>
-      </li>
-       
-
     </ul>
   </div>
 </nav>
 """, unsafe_allow_html=True)
-
-"""
-st.markdown('''# **Version Test**
-A simple template
-''')
-
-st.header('**Version Test**')
-"""
-# 定義觸發的函數
-def show_weekly_report():
-    # 在此處加入您想要的內容變化
-    st.write('這是 Weekly Report 的內容')
-
