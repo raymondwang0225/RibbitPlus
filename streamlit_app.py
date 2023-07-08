@@ -233,7 +233,10 @@ st.markdown(
     """
 <style>
     div[data-testid="stVerticalBlock"] div[style*="flex-direction: column;"] div[data-testid="stVerticalBlock"] {
-        border: 1px solid red;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        padding: 20px 20px 20px 20px;
+        border-radius: 12px;
+        color: rgb(255, 255, 255);
     }
 </style>
 """,
