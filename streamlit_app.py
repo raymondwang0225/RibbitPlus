@@ -29,7 +29,7 @@ div[data-testid="metric-container"] {
    border: 1px solid rgba(0, 0, 0, 0.5);
    padding: 5% 5% 5% 10%;
    border-radius: 12px;
-   color: #ff0000;
+   color: rgb(0, 0, 0);
 }
 }
 </style>
