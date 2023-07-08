@@ -41,9 +41,10 @@ bb = """
 <style>
     /* 在這裡插入你的 CSS 樣式 */
     .my-column {
-        background-color: lightblue;
-        padding: 10px;
-        border-radius: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        padding: 20px 20px 20px 20px;
+        border-radius: 12px;
+        color: rgb(255, 255, 255);
     }
 </style>
 """
