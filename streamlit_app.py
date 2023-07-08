@@ -36,21 +36,21 @@ div[data-testid="metric-container"] {
 """
 
 
-bb='''
+# 定義自定義 CSS 樣式
+bb = """
 <style>
-    section.main>div {
-        padding-bottom: 1rem;
-    }
-    [data-testid="column"] {
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        padding: 20px 20px 20px 20px;
-        border-radius: 12px;
-        color: rgb(255, 255, 255);
-        overflow: auto;
-        height: 70vh;
+    /* 在這裡插入你的 CSS 樣式 */
+    .my-column {
+        background-color: lightblue;
+        padding: 10px;
+        border-radius: 5px;
     }
 </style>
-'''
+"""
+# 在 Streamlit 中渲染自定義 CSS
+st.markdown(bb, unsafe_allow_html=True)
+
+
 
 st.markdown(aa, unsafe_allow_html=True)
 
@@ -179,10 +179,10 @@ if selected == "Filter":
     st.title("Filter")
     st.markdown("<hr/>", unsafe_allow_html = True)
     
-    
     col1, col2 = st.columns([1.5, 7.5],gap="medium")
     
     with col1:
+        st.markdown('<div class="my-column">', unsafe_allow_html=True)
         desired_backgrounds = st.multiselect("Background", backgrounds)
         desired_clothing = st.multiselect("Clothing", clothing)
         desired_bodies = st.multiselect("Body", bodies)
@@ -192,7 +192,7 @@ if selected == "Filter":
         column_value = st.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
         # "Apply Filter" 按钮
         apply_filter = st.button("Apply Filter")
-        st.markdown(bb, unsafe_allow_html=True)
+        st.markdown('</div>', unsafe_allow_html=True)   
     with col2:
     # 应用过滤器并获取最终结果
         if apply_filter:
@@ -235,6 +235,8 @@ if selected == "Filter":
                     image = st.image(frog["image_url"],use_column_width = True)
                     st.markdown(caption, unsafe_allow_html=True)   
         
+            
+    
 
                
     
