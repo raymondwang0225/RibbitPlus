@@ -18,12 +18,11 @@ def streamlit_menu(example=1):
     if example == 1:
         # 1. as sidebar menu
         with st.sidebar:
-            st.sidebar.title("Ribbit Plus")
             selected = option_menu(
-                menu_title=None,  # required
+                menu_title="Ribbit Plus",  # required
                 options=["Home", "Projects", "Contact"],  # required
                 icons=["house", "book", "envelope"],  # optional
-                menu_icon="cast",  # optional
+                menu_icon=None,  # optional
                 default_index=0,  # optional
             )
         return selected
@@ -70,6 +69,5 @@ if selected == "Home":
     st.title(f"You have selected {selected}")
 if selected == "Projects":
     st.title(f"You have selected {selected}")
-    st.sidebar.title("22222")
 if selected == "Contact":
     st.title(f"You have selected {selected}")
