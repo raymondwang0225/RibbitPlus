@@ -29,7 +29,7 @@ st.markdown("""
 <script>
     function triggerWeeklyReport() {
         // 呼叫 Streamlit 函數
-        StreamlitApp._enqueueSctiptCall('show_weekly_report', [], {});
+        show_weekly_report()
     }
 </script>
     </ul>
@@ -48,7 +48,4 @@ st.header('**Version Test**')
 def show_weekly_report():
     # 在此處加入您想要的內容變化
     st.write('這是 Weekly Report 的內容')
-# 呼叫觸發的函數
-if 'show_weekly_report' in st.session_state:
-    show_weekly_report()
-    del st.session_state.show_weekly_report
+
