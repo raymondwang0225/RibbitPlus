@@ -35,6 +35,18 @@ div[data-testid="metric-container"] {
 </style>
 """
 
+css_con="""
+<style>
+div[data-testid="container"] {
+   border: 1px solid rgba(255, 255, 255, 0.25);
+   padding: 20px 20px 20px 20px;
+   border-radius: 12px;
+   color: rgb(255, 255, 255);
+}
+}
+</style>
+"""
+
 st.markdown(aa, unsafe_allow_html=True)
 
 c1,c2 = st.columns([5, 5])
@@ -161,17 +173,20 @@ if selected == "Filter":
 
     st.title("Filter")
     st.markdown("<hr/>", unsafe_allow_html = True)
+    
     col1, col2 = st.columns([1.5, 7.5],gap="medium")
-    with col1:
-        desired_backgrounds = st.multiselect("Background", backgrounds)
-        desired_clothing = st.multiselect("Clothing", clothing)
-        desired_bodies = st.multiselect("Body", bodies)
-        desired_mouths = st.multiselect("Mouth", mouths)
-        desired_eyes = st.multiselect("Eyes", eyes)
-        # 创建一个滑动条
-        column_value = st.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
-        # "Apply Filter" 按钮
-        apply_filter = st.button("Apply Filter")   
+    st.markdown(css_con, unsafe_allow_html=True)
+    with st.container():
+        with col1:
+            desired_backgrounds = st.multiselect("Background", backgrounds)
+            desired_clothing = st.multiselect("Clothing", clothing)
+            desired_bodies = st.multiselect("Body", bodies)
+            desired_mouths = st.multiselect("Mouth", mouths)
+            desired_eyes = st.multiselect("Eyes", eyes)
+            # 创建一个滑动条
+            column_value = st.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
+            # "Apply Filter" 按钮
+            apply_filter = st.button("Apply Filter")   
     with col2:
     # 应用过滤器并获取最终结果
         if apply_filter:
