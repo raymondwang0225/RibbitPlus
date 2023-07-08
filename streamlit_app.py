@@ -26,11 +26,10 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 aa="""
 <style>
 div[data-testid="metric-container"] {
-   border: 1px solid rgba(0, 0, 0, 0.5);
+   border: 1px solid rgba(255, 255, 255, 0.5);
    padding: 5% 5% 5% 10%;
    border-radius: 12px;
-   color: rgb(0, 0, 0);
-   overflow-wrap: break-word;
+   color: rgb(255, 255, 255);
 }
 }
 </style>
