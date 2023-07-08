@@ -69,5 +69,6 @@ if selected == "Home":
     st.title(f"You have selected {selected}")
 if selected == "Projects":
     st.title(f"You have selected {selected}")
+    st.sidebar.title("22222")
 if selected == "Contact":
     st.title(f"You have selected {selected}")
