@@ -3,6 +3,7 @@ from streamlit_option_menu import option_menu
 import pandas as pd
 import plost
 import json;
+from streamlit_modal import Modal
 
 
 with open('bitcoin_frogs_items.json') as f:
