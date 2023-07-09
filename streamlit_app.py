@@ -7,7 +7,8 @@ custom_css = """
     .colA {
         background-color: lightblue;
         padding: 10px;
-        border-radius: 5px;
+        border-radius: 12px;
+        color: rgb(255, 255, 255);
     }
 </style>
 """
