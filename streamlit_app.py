@@ -222,10 +222,7 @@ if selected == "Filter":
                     image = st.image(frog["image_url"],use_column_width = True)
                     #st.markdown(caption, unsafe_allow_html=True)
                     # 顯示動態內容的標題
-                    if st.button(link_name):
-                        temp.empty()
-                        temp.write("This is the end")
-                        temp.write("This is the end")
+                    st.button(link_name, on_click=open_page, args=(link_url,))
 
 
 def custom_function():
