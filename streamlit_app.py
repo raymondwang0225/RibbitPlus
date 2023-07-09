@@ -209,7 +209,7 @@ if selected == "Filter":
             #spacing = 200  
 
             # 创建网格布局
-            cols = temp.columns(col_width)
+            cols = st.columns(col_width)
             # 显示图片
             for i, frog in enumerate(filtered_frogs):
                 with cols[i % col_width]:
@@ -223,7 +223,7 @@ if selected == "Filter":
                     #st.markdown(caption, unsafe_allow_html=True)
                     # 顯示動態內容的標題
                     if st.button(link_name):
-                        st.empty()
+                        temp.empty()
                         st.write("This is the end")
                         st.write("This is the end")
 
