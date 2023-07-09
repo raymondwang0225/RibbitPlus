@@ -165,19 +165,20 @@ if selected == "Filter":
     st.title("Filter")
     st.markdown("<hr/>", unsafe_allow_html = True)
     
-    col1, col2 = st.columns([1.5, 7.5],gap="medium")
+    temp = st.empty()
+    col1, col2 = temp.columns([1.5, 7.5],gap="medium")
     
     with col1:
-        temp = st.empty()
-        desired_backgrounds = temp.multiselect("Background", backgrounds)
-        desired_clothing = temp.multiselect("Clothing", clothing)
-        desired_bodies = temp.multiselect("Body", bodies)
-        desired_mouths = temp.multiselect("Mouth", mouths)
-        desired_eyes = temp.multiselect("Eyes", eyes)
+        
+        desired_backgrounds = st.multiselect("Background", backgrounds)
+        desired_clothing = st.multiselect("Clothing", clothing)
+        desired_bodies = st.multiselect("Body", bodies)
+        desired_mouths = st.multiselect("Mouth", mouths)
+        desired_eyes = st.multiselect("Eyes", eyes)
         # 创建一个滑动条
-        column_value = temp.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
+        column_value = st.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
         # "Apply Filter" 按钮
-        apply_filter = temp.button("Apply Filter")   
+        apply_filter = st.button("Apply Filter")   
     with col2:
     # 应用过滤器并获取最终结果
         if apply_filter:
@@ -222,7 +223,7 @@ if selected == "Filter":
                     #st.markdown(caption, unsafe_allow_html=True)
                     # 顯示動態內容的標題
                     if st.button(link_name):
-                        temp.empty()
+                        st.empty()
                         st.write("This is the end")
                         st.write("This is the end")
 
