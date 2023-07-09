@@ -220,12 +220,12 @@ if selected == "Filter":
                     image = st.image(frog["image_url"],use_column_width = True)
                     #st.markdown(caption, unsafe_allow_html=True)
                     # 顯示動態內容的標題
-                    caption = get_dynamic_caption()
-                    st.markdown(f"**{caption}**")
+                    if st.button(link_name):
+                        custom_function()
+
+
+def custom_function():
+    st.write("執行自定義函數")
                     
-        
-# 定義一個返回動態內容的函數
-def get_dynamic_caption():
-    # 在這裡根據需要編寫你的動態邏輯
-    return "這是一個動態內容"
+
 
