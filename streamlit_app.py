@@ -38,7 +38,7 @@ div[data-testid="metric-container"] {
 """
 
 st.title("Bitcoin Frogs") 
-st.markdown('##### Items 10K  ·  Created Mar 2023  ·  Free Mint  ·  Chain Bitcoin') 
+st.markdown('###### Items 10K**  ·  Created Mar** 2023**  ·Sale  Free** Mint**  ·  Chain Bitcoin**') 
 
 
 st.markdown(aa, unsafe_allow_html=True)
