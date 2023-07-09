@@ -3,7 +3,7 @@ from streamlit_option_menu import option_menu
 import pandas as pd
 import plost
 import json;
-from streamlit.components.v1 import html
+import webbrowser
 
 
 
@@ -221,13 +221,7 @@ if selected == "Filter":
                     image = st.image(frog["image_url"],use_column_width = True)
                     #st.markdown(caption, unsafe_allow_html=True)
                     # 顯示動態內容的標題
-                    st.button(link_name, on_click=open_page, args=(link_url,))
+                    if st.button(link_name):
+                        webbrowser.open_new_tab(link_url)
 
 
-def open_page(url):
-    open_script= """
-        <script type="text/javascript">
-            window.open('%s', '_blank').focus();
-        </script>
-    """ % (url)
-    html(open_script)
