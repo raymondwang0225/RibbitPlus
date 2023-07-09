@@ -221,9 +221,6 @@ if selected == "Filter":
                     image = st.image(frog["image_url"],use_column_width = True)
                     #st.markdown(caption, unsafe_allow_html=True)
                     # 顯示動態內容的標題
-                    st.markdown(f'''
-                    <a href={link_url}><button>{link_name}</button></a>
-                    ''',
-                    unsafe_allow_html=True)
-
+                    if st.button(link_name):
+                        webbrowser.open_new_tab(link_url)
 
