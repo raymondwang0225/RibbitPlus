@@ -81,8 +81,8 @@ def streamlit_menu(example=1):
         with st.sidebar:
             selected = option_menu(
                 menu_title="RIBBIT PLUS",  # required
-                options=["Home", "Projects", "Contact","Filter","Weekly Report"],  # required
-                icons=["house", "book", "envelope","bi bi-funnel","bi bi-archive"],  # optional
+                options=["Home", "Projects", "Data","Filter","Weekly Report"],  # required
+                icons=["house", "book", "bi bi-bar-chart","bi bi-funnel","bi bi-archive"],  # optional
                 menu_icon="bi bi-arrow-up-left-square",  # optional
                 default_index=0,  # optional
             )
@@ -95,8 +95,8 @@ def streamlit_menu(example=1):
         st.title("Ribbit Plus")
         selected = option_menu(
             menu_title=None,  # required
-            options=["Home", "Projects", "Contact","Filter","Weekly Report"],  # required
-            icons=["house", "book", "envelope","bi bi-funnel","bi bi-archive"],  # optional
+            options=["Home", "Projects", "Data","Filter","Weekly Report"],  # required
+            icons=["house", "book", "bi bi-bar-chart","bi bi-funnel","bi bi-archive"],  # optional
             menu_icon="bi bi-arrow-up-left-square",  # optional
             default_index=0,  # optional
             orientation="horizontal",
