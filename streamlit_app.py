@@ -221,8 +221,7 @@ if selected == "Filter":
                     #st.markdown(caption, unsafe_allow_html=True)
                     # 顯示動態內容的標題
                     if st.button(link_name):
-                        st.empty()
-                        st.write("執行自定義函數")
+                        st.session_state.page = 0
 
 
 def custom_function():
