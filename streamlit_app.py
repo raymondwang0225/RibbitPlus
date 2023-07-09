@@ -7,8 +7,7 @@ custom_css = """
     .colA {
         background-color: lightblue;
         padding: 10px;
-        border-radius: 12px;
-        color: rgb(255, 255, 255);
+        border-radius: 5px;
     }
 </style>
 """
@@ -21,8 +20,10 @@ colA, colB = st.columns(2)
 
 # 在 colA 中添加內容
 with colA:
-    # 這裡的內容將套用自訂 CSS 樣式
+    # 使用 st.markdown 嵌入自訂的 HTML
+    st.markdown('<div class="colA">', unsafe_allow_html=True)
     st.write("這是 colA 中的內容")
+    st.markdown('</div>', unsafe_allow_html=True)
 
 # 在 colB 中添加內容
 with colB:
