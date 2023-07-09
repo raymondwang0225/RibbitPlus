@@ -16,7 +16,7 @@ custom_css = """
 st.markdown(custom_css, unsafe_allow_html=True)
 
 # 創建兩個列
-colA, colB = st.beta_columns(2)
+colA, colB = st.columns(2)
 
 # 在 colA 中添加內容
 with colA:
