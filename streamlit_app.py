@@ -39,7 +39,11 @@ div[data-testid="metric-container"] {
 
 st.title("Bitcoin Frogs") 
 st.markdown('##### Items 10K  ·  Created Mar 2023  ·  Free Mint  ·  Chain Bitcoin') 
-st.write('Items 10K  ·  Created Mar 2023  ·  Free Mint  ·  Chain Bitcoin') 
+#st.write('Items 10K  ·  Created Mar 2023  ·  Free Mint  ·  Chain Bitcoin') 
+with st.expander("See More"):
+    st.markdown('##### Bitcoin Frogs are 10,000 pure digital collectibles that will remain on Bitcoin forever. No more will ever be created. Rarities of all traits within each layer are equal, allowing subjective appreciation of aesthetics and satoshi-based rarities to emerge.') 
+
+
 
 st.markdown(aa, unsafe_allow_html=True)
 
