@@ -3,7 +3,7 @@ from streamlit_option_menu import option_menu
 import pandas as pd
 import plost
 import json;
-from streamlit_modal import Modal
+
 
 
 with open('bitcoin_frogs_items.json') as f:
@@ -228,16 +228,3 @@ if selected == "Filter":
                     image = st.image(frog["image_url"],use_column_width = True)
                     st.markdown(caption, unsafe_allow_html=True)   
         
-modal = Modal("Demo Modal")
-open_modal = st.button("Open")
-if open_modal:
-    modal.open()
-
-if modal.is_open():
-    with modal.container():
-        st.write("Text goes here")
-
-        st.write("Some fancy text")
-        value = st.checkbox("Check me")
-        st.write(f"Checkbox checked: {value}")
-    
