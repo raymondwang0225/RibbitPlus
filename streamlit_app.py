@@ -221,7 +221,6 @@ if selected == "Filter":
                     #st.markdown(caption, unsafe_allow_html=True)
                     # 顯示動態內容的標題
                     if st.button(link_name):
-                        st.session_state.page = 0
                         st.empty()
                         st.write("This is the end")
                         st.write("This is the end")
