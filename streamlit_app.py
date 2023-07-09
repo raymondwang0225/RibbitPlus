@@ -3,6 +3,7 @@ from streamlit_option_menu import option_menu
 import pandas as pd
 import plost
 import json;
+from streamlit.components.v1 import html
 
 
 
@@ -165,11 +166,9 @@ if selected == "Filter":
     st.title("Filter")
     st.markdown("<hr/>", unsafe_allow_html = True)
     
-    
     col1, col2 = st.columns([1.5, 7.5],gap="medium")
     
     with col1:
-        
         desired_backgrounds = st.multiselect("Background", backgrounds)
         desired_clothing = st.multiselect("Clothing", clothing)
         desired_bodies = st.multiselect("Body", bodies)
@@ -182,7 +181,7 @@ if selected == "Filter":
     with col2:
     # 应用过滤器并获取最终结果
         if apply_filter:
-            temp = st.empty()
+            
             # 根据条件过滤人物
             filtered_frogs = [frog for frog in frog_data if
                             (not desired_backgrounds or frog["background"]  in desired_backgrounds) and
@@ -193,7 +192,7 @@ if selected == "Filter":
 
             # 显示符合条件的人物
             #st.write("Filtered Bitcoin Frogs  :   [ " + str(len(filtered_frogs)) + " ] Frogs")
-            temp.write("Result  :   [ " + str(len(filtered_frogs)) + " ] Frogs")
+            st.write("Result  :   [ " + str(len(filtered_frogs)) + " ] Frogs")
             for frog in filtered_frogs:
                 frog["image_url"] = 'https://ordiscan.com/content/'+str(frog["inscription_id"])
                 frog["me_link"] = "https://magiceden.io/ordinals/item-details/" + str(frog["inscription_id"])
@@ -209,7 +208,7 @@ if selected == "Filter":
             #spacing = 200  
 
             # 创建网格布局
-            cols = temp.columns(col_width)
+            cols = st.columns(col_width)
             # 显示图片
             for i, frog in enumerate(filtered_frogs):
                 with cols[i % col_width]:
@@ -225,8 +224,10 @@ if selected == "Filter":
                     st.button(link_name, on_click=open_page, args=(link_url,))
 
 
-def custom_function():
-    st.write("執行自定義函數")
-                    
-
-
+def open_page(url):
+    open_script= """
+        <script type="text/javascript">
+            window.open('%s', '_blank').focus();
+        </script>
+    """ % (url)
+    html(open_script)
