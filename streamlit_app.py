@@ -218,5 +218,9 @@ if selected == "Filter":
                     #st.image(frog["image_url"],width=576/4)
                     
                     image = st.image(frog["image_url"],use_column_width = True)
-                    st.markdown(caption, unsafe_allow_html=True)   
+                    #st.markdown(caption, unsafe_allow_html=True)
+                    st.markdown('<a href="#" onclick="custom_function(); return false;">f"[{link_name}]</a>', unsafe_allow_html=True)  
         
+# 定義自定義的函數
+def custom_function():
+    st.write("執行自定義函數")
