@@ -37,18 +37,26 @@ div[data-testid="metric-container"] {
 </style>
 """
 
-
+st.title("Bitcoin Frogs")
 
 st.markdown(aa, unsafe_allow_html=True)
 
-c1,c2 = st.columns([5, 5])
+c1,c2,c3,c4,c5,c6 = st.columns(6)
 with c1:
-    st.metric(label="c1", value="70 °F")
+    st.metric(label="total volume", value="453.2698")
 with c2:
-    st.metric(label="c2", value="70 °F")
+    st.metric(label="floor price", value="0.027")
+with c3:
+    st.metric(label="listed %", value="0.97%")
+with c4:
+    st.metric(label="listed", value="972")
+with c5:
+    st.metric(label="unique owners", value="38%")
+with c6:
+    st.metric(label="unique owners", value="38%")
 
-st.metric(label="This is a very very very very very long sentence", value="70 °F")
-st.metric(label="This is a very very very very very long sentence", value="70 °F")
+#st.metric(label="This is a very very very very very long sentence", value="70 °F")
+#st.metric(label="This is a very very very very very long sentence", value="70 °F")
 
 
 
@@ -221,4 +229,3 @@ if selected == "Filter":
                     image = st.image(frog["image_url"],use_column_width = True)
                     st.markdown(caption, unsafe_allow_html=True)
                     # 顯示動態內容的標題
-                   
