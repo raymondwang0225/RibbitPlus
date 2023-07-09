@@ -52,9 +52,9 @@ with c1:
 with c2:
     st.metric(label="floor price", value="0.027")
 with c3:
-    st.metric(label="listed %", value="0.97%")
-with c4:
     st.metric(label="listed", value="972")
+with c4:
+    st.metric(label="listed %", value="0.97%")
 with c5:
     st.metric(label="owners", value="4412")
 with c6:
