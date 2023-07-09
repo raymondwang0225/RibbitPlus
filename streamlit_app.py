@@ -35,6 +35,17 @@ div[data-testid="metric-container"] {
 </style>
 """
 
+bb="""
+<style>
+div[data-testid="stImage"] {
+   border-radius: 12px; 
+}
+}
+</style>
+"""
+
+st.markdown(bb, unsafe_allow_html=True)
+
 st.markdown(aa, unsafe_allow_html=True)
 
 c1,c2 = st.columns([5, 5])
