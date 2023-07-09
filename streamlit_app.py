@@ -56,7 +56,7 @@ with c3:
 with c4:
     st.metric(label="listed", value="972")
 with c5:
-    st.metric(label="unique owners", value="38%")
+    st.metric(label="owners", value="4412")
 with c6:
     st.metric(label="unique owners", value="38%")
 
