@@ -37,7 +37,9 @@ div[data-testid="metric-container"] {
 </style>
 """
 
-st.title("Bitcoin Frogs")
+st.title("Bitcoin Frogs") 
+st.subheader('Items 10K  ·  Created Mar 2023  ·  Free Mint  ·  Chain Bitcoin') 
+
 
 st.markdown(aa, unsafe_allow_html=True)
 
