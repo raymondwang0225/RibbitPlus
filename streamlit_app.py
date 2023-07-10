@@ -181,27 +181,30 @@ if selected == "Filter":
     st.title("Filter")
     #st.markdown("<hr/>", unsafe_allow_html = True)
     
-    col1, col2 ,col3 = st.columns([2, 6,2])
-    
-    with col1:
-        with st.expander("Status"):
+    col1, col2 ,col3, col4 , col5 ,col6 ,col7 = st.columns([1,1,1,1,1,1,1])
+    with st.expander("Status"):
+        with col1:
             desired_satyears = st.multiselect("Sat Year", satyears)
-       
-       
-    with col2:
-    # 应用过滤器并获取最终结果
-        with st.expander("Traits"):
-                desired_backgrounds = st.multiselect("Background", backgrounds)
-                desired_clothing = st.multiselect("Clothing", clothing)
-                desired_bodies = st.multiselect("Body", bodies)
-                desired_mouths = st.multiselect("Mouth", mouths)
-                desired_eyes = st.multiselect("Eyes", eyes)
+        
+        
+        with col2:
+        # 应用过滤器并获取最终结果
+            desired_backgrounds = st.multiselect("Background", backgrounds)
+        with col3:
+            desired_clothing = st.multiselect("Clothing", clothing)
+        with col4:
+            desired_bodies = st.multiselect("Body", bodies)
+        with col5:
+            desired_mouths = st.multiselect("Mouth", mouths)
+        with col6:
+            desired_eyes = st.multiselect("Eyes", eyes)
 
-    with col3:
-         # 创建一个滑动条
-        column_value = st.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
-        # "Apply Filter" 按钮
-        apply_filter = st.button("Apply Filter")   
+        with col7:
+            # 创建一个滑动条
+            column_value = st.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
+            # "Apply Filter" 按钮
+    
+    apply_filter = st.button("Apply Filter")   
 
 if apply_filter:
             # 根据条件过滤人物
