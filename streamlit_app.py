@@ -181,7 +181,7 @@ if selected == "Filter":
     st.title("Filter")
     #st.markdown("<hr/>", unsafe_allow_html = True)
     with st.expander("Condition"):
-        col1, col2 ,col3, col4 , col5 ,col6 ,col7 = st.columns([0.75,1,1,1,1,1,0.75])
+        col1, col2 ,col3, col4 , col5 ,col6 = st.columns([1,1,1,1,1,1])
     
         with col1:
             desired_satyears = st.multiselect("Sat Year", satyears)
@@ -199,11 +199,11 @@ if selected == "Filter":
         with col6:
             desired_eyes = st.multiselect("Eyes", eyes)
 
-        with col7:
-            # 创建一个滑动条
-            column_value = st.slider("Column quantity", min_value=1, max_value=11, value=10, step=1)
-            # "Apply Filter" 按钮
-    
+        
+        # 创建一个滑动条
+        column_value = st.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
+            
+    # "Apply Filter" 按钮
     apply_filter = st.button("Apply Filter")   
 
     if apply_filter:
