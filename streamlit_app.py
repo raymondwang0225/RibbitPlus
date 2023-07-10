@@ -181,7 +181,7 @@ if selected == "Filter":
     st.title("Filter")
     #st.markdown("<hr/>", unsafe_allow_html = True)
     with st.expander("aaa"):
-        col1, col2 ,col3, col4 , col5 ,col6 ,col7 = st.columns([1,1,1,1,1,1,0.5])
+        col1, col2 ,col3, col4 , col5 ,col6 ,col7 = st.columns([0.75,1,1,1,1,1,0.75])
     
         with col1:
             desired_satyears = st.multiselect("Sat Year", satyears)
