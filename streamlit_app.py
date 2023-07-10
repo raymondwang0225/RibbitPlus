@@ -25,17 +25,7 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 
-aa="""
-<style>
-div[data-testid="metric-container"] {
-   border: 1px solid rgba(255, 255, 255, 0.25);
-   padding: 20px 20px 20px 20px;
-   border-radius: 12px;
-   color: rgb(255, 255, 255);
-}
-}
-</style>
-"""
+
 
 
 
@@ -152,7 +142,38 @@ if selected == "Home":
 if selected == "Projects":
     st.title(f"You have selected {selected}")
 if selected == "Data":
-    showData()
+    st.title("Bitcoin Frogs") 
+    st.markdown('##### Items 10K  ·  Created Mar 2023  ·  Free Mint  ·  Chain Bitcoin') 
+    #st.write('Items 10K  ·  Created Mar 2023  ·  Free Mint  ·  Chain Bitcoin') 
+    st.write('Bitcoin Frogs are 10,000 pure digital collectibles that will remain on Bitcoin forever. No more will ever be created. Rarities of all traits within each layer are equal, allowing subjective appreciation of aesthetics and satoshi-based rarities to emerge.') 
+
+    aa="""
+    <style>
+    div[data-testid="metric-container"] {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 20px 20px 20px 20px;
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    }
+    }
+    </style>
+    """
+
+    st.markdown(aa, unsafe_allow_html=True)
+
+    c1,c2,c3,c4,c5,c6 = st.columns(6)
+    with c1:
+        st.metric(label="total volume", value="453.2698")
+    with c2:
+        st.metric(label="floor price", value="0.027")
+    with c3:
+        st.metric(label="listed", value="972")
+    with c4:
+        st.metric(label="listed %", value="0.97%")
+    with c5:
+        st.metric(label="owners", value="4412")
+    with c6:
+        st.metric(label="unique owners", value="44.12%")
     #st.title(f"You have selected {selected}")
 if selected == "Filter":
     
@@ -221,26 +242,5 @@ if selected == "Filter":
                     # 顯示動態內容的標題
 
 
-def showData():
-    st.title("Bitcoin Frogs") 
-    st.markdown('##### Items 10K  ·  Created Mar 2023  ·  Free Mint  ·  Chain Bitcoin') 
-    #st.write('Items 10K  ·  Created Mar 2023  ·  Free Mint  ·  Chain Bitcoin') 
-    st.write('Bitcoin Frogs are 10,000 pure digital collectibles that will remain on Bitcoin forever. No more will ever be created. Rarities of all traits within each layer are equal, allowing subjective appreciation of aesthetics and satoshi-based rarities to emerge.') 
 
-
-
-    st.markdown(aa, unsafe_allow_html=True)
-
-    c1,c2,c3,c4,c5,c6 = st.columns(6)
-    with c1:
-        st.metric(label="total volume", value="453.2698")
-    with c2:
-        st.metric(label="floor price", value="0.027")
-    with c3:
-        st.metric(label="listed", value="972")
-    with c4:
-        st.metric(label="listed %", value="0.97%")
-    with c5:
-        st.metric(label="owners", value="4412")
-    with c6:
-        st.metric(label="unique owners", value="44.12%")
+   
