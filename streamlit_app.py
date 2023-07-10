@@ -206,7 +206,7 @@ if selected == "Filter":
     
     apply_filter = st.button("Apply Filter")   
 
-if apply_filter:
+    if apply_filter:
             # 根据条件过滤人物
             filtered_frogs = [frog for frog in frog_data if
                             (not desired_satyears or frog["sat_year"]  in desired_satyears) and
