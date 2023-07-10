@@ -37,28 +37,7 @@ div[data-testid="metric-container"] {
 </style>
 """
 
-st.title("Bitcoin Frogs") 
-st.markdown('##### Items 10K  ·  Created Mar 2023  ·  Free Mint  ·  Chain Bitcoin') 
-#st.write('Items 10K  ·  Created Mar 2023  ·  Free Mint  ·  Chain Bitcoin') 
-st.write('Bitcoin Frogs are 10,000 pure digital collectibles that will remain on Bitcoin forever. No more will ever be created. Rarities of all traits within each layer are equal, allowing subjective appreciation of aesthetics and satoshi-based rarities to emerge.') 
 
-
-
-st.markdown(aa, unsafe_allow_html=True)
-
-c1,c2,c3,c4,c5,c6 = st.columns(6)
-with c1:
-    st.metric(label="total volume", value="453.2698")
-with c2:
-    st.metric(label="floor price", value="0.027")
-with c3:
-    st.metric(label="listed", value="972")
-with c4:
-    st.metric(label="listed %", value="0.97%")
-with c5:
-    st.metric(label="owners", value="4412")
-with c6:
-    st.metric(label="unique owners", value="38%")
 
 #st.metric(label="This is a very very very very very long sentence", value="70 °F")
 #st.metric(label="This is a very very very very very long sentence", value="70 °F")
@@ -172,18 +151,19 @@ if selected == "Home":
             use_container_width=True)
 if selected == "Projects":
     st.title(f"You have selected {selected}")
-if selected == "Contact":
-    st.title(f"You have selected {selected}")
+if selected == "Data":
+    showData()
+    #st.title(f"You have selected {selected}")
 if selected == "Filter":
     
 
     st.title("Filter")
-    st.markdown("<hr/>", unsafe_allow_html = True)
+    #st.markdown("<hr/>", unsafe_allow_html = True)
     
     col1, col2 = st.columns([1.5, 7.5],gap="medium")
     
     with col1:
-        with st.expander("Sat Years"):
+        with st.expander("Status"):
             desired_satyears = st.multiselect("Sat Year", satyears)
         with st.expander("Traits"):
             desired_backgrounds = st.multiselect("Background", backgrounds)
@@ -239,3 +219,28 @@ if selected == "Filter":
                     image = st.image(frog["image_url"],use_column_width = True)
                     st.markdown(caption, unsafe_allow_html=True)
                     # 顯示動態內容的標題
+
+
+def showData():
+    st.title("Bitcoin Frogs") 
+    st.markdown('##### Items 10K  ·  Created Mar 2023  ·  Free Mint  ·  Chain Bitcoin') 
+    #st.write('Items 10K  ·  Created Mar 2023  ·  Free Mint  ·  Chain Bitcoin') 
+    st.write('Bitcoin Frogs are 10,000 pure digital collectibles that will remain on Bitcoin forever. No more will ever be created. Rarities of all traits within each layer are equal, allowing subjective appreciation of aesthetics and satoshi-based rarities to emerge.') 
+
+
+
+    st.markdown(aa, unsafe_allow_html=True)
+
+    c1,c2,c3,c4,c5,c6 = st.columns(6)
+    with c1:
+        st.metric(label="total volume", value="453.2698")
+    with c2:
+        st.metric(label="floor price", value="0.027")
+    with c3:
+        st.metric(label="listed", value="972")
+    with c4:
+        st.metric(label="listed %", value="0.97%")
+    with c5:
+        st.metric(label="owners", value="4412")
+    with c6:
+        st.metric(label="unique owners", value="44.12%")
