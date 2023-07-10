@@ -77,6 +77,7 @@ st.markdown(
 )
 
 # 属性选项
+satyears =["2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023"]
 backgrounds = ["Brown", "Red", "Olive", "Grey", "Pink", "Dark Blue", "Orange", "Blue", "Green", "Light Blue", "Bitcoin Orange", "Black", "Yellow"]
 clothing = ["Prison Jumpsuit", "Green Hoodie", "Businessman", "Bling", "Wizard Robe", "None", "Leather Jacket", "Leather Dust Coat", "Red Hoodie", "Elvis", "Jersey", "Orange Checkered", "Blue Jacket", "Fur Coat", "23 TShirt", "Black Vest", "Karate Outfit", "Black Hoodie", "Purple Checkered", "Kings Robes", "Vest and Shirt", "Ninja", "Clown", "Priest", "Red Overalls", "Grey Suit", "Blue Hoodie", "Hawaiian", "Hitman", "Yellow Hoodie", "Bowtie", "Bitcoin Shirt", "Gentlemans Suit", "Spartan"]
 bodies = ["Spotted", "Electro", "Dark Red", "Green", "Tron"]
@@ -182,11 +183,14 @@ if selected == "Filter":
     col1, col2 = st.columns([1.5, 7.5],gap="medium")
     
     with col1:
-        desired_backgrounds = st.multiselect("Background", backgrounds)
-        desired_clothing = st.multiselect("Clothing", clothing)
-        desired_bodies = st.multiselect("Body", bodies)
-        desired_mouths = st.multiselect("Mouth", mouths)
-        desired_eyes = st.multiselect("Eyes", eyes)
+        with st.expander("Sat Years"):
+            desired_satyears = st.multiselect("Sat Year", satyears)
+        with st.expander("Traits"):
+            desired_backgrounds = st.multiselect("Background", backgrounds)
+            desired_clothing = st.multiselect("Clothing", clothing)
+            desired_bodies = st.multiselect("Body", bodies)
+            desired_mouths = st.multiselect("Mouth", mouths)
+            desired_eyes = st.multiselect("Eyes", eyes)
         # 创建一个滑动条
         column_value = st.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
         # "Apply Filter" 按钮
@@ -197,6 +201,7 @@ if selected == "Filter":
             
             # 根据条件过滤人物
             filtered_frogs = [frog for frog in frog_data if
+                            (not desired_satyears or frog["sat_year"]  in desired_satyears) and
                             (not desired_backgrounds or frog["background"]  in desired_backgrounds) and
                             (not desired_bodies or frog["body"] in desired_bodies) and
                             (not desired_clothing or frog["clothing"] in desired_clothing) and  
