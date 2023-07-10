@@ -180,7 +180,7 @@ if selected == "Filter":
 
     st.title("Filter")
     #st.markdown("<hr/>", unsafe_allow_html = True)
-    with st.expander("Condition",False):
+    with st.expander("Condition",True):
         col1, col2 ,col3, col4 , col5 ,col6 = st.columns([1,1,1,1,1,1])
     
         with col1:
