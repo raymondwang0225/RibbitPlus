@@ -180,7 +180,7 @@ if selected == "Filter":
 
     st.title("Filter")
     #st.markdown("<hr/>", unsafe_allow_html = True)
-    with st.expander("Condition"):
+    with st.expander("Condition",False):
         col1, col2 ,col3, col4 , col5 ,col6 = st.columns([1,1,1,1,1,1])
     
         with col1:
@@ -200,8 +200,8 @@ if selected == "Filter":
             desired_eyes = st.multiselect("Eyes", eyes)
 
         
-        # 创建一个滑动条
-        column_value = st.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
+    # 创建一个滑动条
+    column_value = st.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
             
     # "Apply Filter" 按钮
     apply_filter = st.button("Apply Filter")   
