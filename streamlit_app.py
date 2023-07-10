@@ -181,25 +181,29 @@ if selected == "Filter":
     st.title("Filter")
     #st.markdown("<hr/>", unsafe_allow_html = True)
     
-    col1, col2 = st.columns([1.5, 7.5],gap="medium")
+    col1, col2 ,col3 = st.columns([2, 6,2])
     
     with col1:
         with st.expander("Status"):
             desired_satyears = st.multiselect("Sat Year", satyears)
+       
+       
+    with col2:
+    # 应用过滤器并获取最终结果
         with st.expander("Traits"):
-            desired_backgrounds = st.multiselect("Background", backgrounds)
-            desired_clothing = st.multiselect("Clothing", clothing)
-            desired_bodies = st.multiselect("Body", bodies)
-            desired_mouths = st.multiselect("Mouth", mouths)
-            desired_eyes = st.multiselect("Eyes", eyes)
-        # 创建一个滑动条
+                desired_backgrounds = st.multiselect("Background", backgrounds)
+                desired_clothing = st.multiselect("Clothing", clothing)
+                desired_bodies = st.multiselect("Body", bodies)
+                desired_mouths = st.multiselect("Mouth", mouths)
+                desired_eyes = st.multiselect("Eyes", eyes)
+
+    with col3:
+         # 创建一个滑动条
         column_value = st.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
         # "Apply Filter" 按钮
         apply_filter = st.button("Apply Filter")   
-    with col2:
-    # 应用过滤器并获取最终结果
-        if apply_filter:
-            
+
+if apply_filter:
             # 根据条件过滤人物
             filtered_frogs = [frog for frog in frog_data if
                             (not desired_satyears or frog["sat_year"]  in desired_satyears) and
