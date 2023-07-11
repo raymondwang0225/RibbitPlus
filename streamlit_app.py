@@ -57,6 +57,45 @@ eyes = ["Dank Shades", "Happy", "Visor", "Monocle", "none", "Frown", "Powerful",
 #1=sidebar menu, 2=horizontal menu, 3=horizontal menu w/ custom menu
 EXAMPLE_NO = 1
 
+def callback_filter():
+    # 根据条件过滤人物
+    filtered_frogs = [frog for frog in frog_data if
+                      (not desired_satyears or frog["sat_year"]  in desired_satyears) and
+                      (not desired_backgrounds or frog["background"]  in desired_backgrounds) and
+                      (not desired_bodies or frog["body"] in desired_bodies) and
+                      (not desired_clothing or frog["clothing"] in desired_clothing) and  
+                      (not desired_mouths or frog["mouth"] in desired_mouths) and
+                      (not desired_eyes or frog["eyes"] in desired_eyes)]
+    # 显示符合条件的人物
+    #st.write("Filtered Bitcoin Frogs  :   [ " + str(len(filtered_frogs)) + " ] Frogs")
+    st.write("Result  :   [ " + str(len(filtered_frogs)) + " ] Frogs")
+    for frog in filtered_frogs:
+        frog["image_url"] = 'https://ordiscan.com/content/'+str(frog["inscription_id"])
+        frog["me_link"] = "https://magiceden.io/ordinals/item-details/" + str(frog["inscription_id"])
+        #st.write(frog)
+        #st.image('https://ordiscan.com/content/'+str(frog["inscription_id"]), caption=frog["item_name"],width=576/2)
+    
+        # 定义每列的宽度
+        col_width = column_value
+            
+        # 间距的像素值
+        #spacing = 200  
+
+        # 创建网格布局
+        cols = st.columns(col_width)
+        # 显示图片
+        for i, frog in enumerate(filtered_frogs):
+            with cols[i % col_width]:
+                link_url = frog["me_link"]
+                link_name = frog["item_name"] 
+                caption = f"[{link_name}]({link_url})"
+                    
+                #st.image(frog["image_url"],width=576/4)
+                    
+                image = st.image(frog["image_url"],use_column_width = True)
+                st.markdown(caption, unsafe_allow_html=True)
+                  
+
 
 def streamlit_menu(example=1):
     if example == 1:
@@ -189,15 +228,15 @@ if selected == "Filter":
         
         with col2:
         # 应用过滤器并获取最终结果
-            desired_backgrounds = st.multiselect("Background", backgrounds)
+            desired_backgrounds = st.multiselect("Background", backgrounds,on_change= callback_filter)
         with col3:
-            desired_clothing = st.multiselect("Clothing", clothing)
+            desired_clothing = st.multiselect("Clothing", clothing,on_change= callback_filter)
         with col4:
-            desired_bodies = st.multiselect("Body", bodies)
+            desired_bodies = st.multiselect("Body", bodies,on_change= callback_filter)
         with col5:
-            desired_mouths = st.multiselect("Mouth", mouths)
+            desired_mouths = st.multiselect("Mouth", mouths,on_change= callback_filter)
         with col6:
-            desired_eyes = st.multiselect("Eyes", eyes)
+            desired_eyes = st.multiselect("Eyes", eyes,on_change= callback_filter)
 
     
     col_01,col_02,col_03 = st.columns([5,1.5,1.5])
@@ -217,7 +256,7 @@ if selected == "Filter":
     
     
 
-            
+ '''           
     # "Apply Filter" 按钮
     apply_filter = st.button("Apply Filter")   
 
@@ -263,6 +302,6 @@ if selected == "Filter":
                     st.markdown(caption, unsafe_allow_html=True)
                     # 顯示動態內容的標題
 
-
+'''
 
    
