@@ -205,7 +205,6 @@ if selected == "Filter":
         text_input = st.text_input(
         "Enter some text 👇",
         label_visibility="hidden",
-        disabled=st.session_state.disabled,
         placeholder="Search by name or trait",)
         
     with col_02:
