@@ -6,6 +6,7 @@ import json;
 
 
 def clear_multi():
+    st.session_state.multiselect_satyears = []
     st.session_state.multiselect_backgrounds = []
     st.session_state.multiselect_clothing = []
     st.session_state.multiselect_bodies = []
@@ -192,8 +193,6 @@ if selected == "Filter":
 
     with col1:
         desired_satyears = st.multiselect("Sat Year", satyears, key="multiselect_satyears")
-    
-    
     with col2:
     # 应用过滤器并获取最终结果
         desired_backgrounds = st.multiselect("Background", backgrounds, key="multiselect_backgrounds")
