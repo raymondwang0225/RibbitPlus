@@ -200,7 +200,7 @@ if selected == "Filter":
             desired_eyes = st.multiselect("Eyes", eyes)
 
     
-    col_01,col_02,col_03 = st.columns([5,1,1])
+    col_01,col_02,col_03 = st.columns([5,1.5,1.5])
     with col_01:
         text_input = st.text_input(
         "Enter some text 👇",
@@ -213,7 +213,7 @@ if selected == "Filter":
     with col_03:
     # 创建一个滑动条
     #column_value = st.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
-        column_value = st.selectbox("Column display quantity", (1, 2, 3,4,5,6,7,8,9,10,11))
+        column_value = st.selectbox("Column display quantity", (1, 2, 3,4,5,6,7,8,9,10,11),label_visibility="hidden")
     
     
 
