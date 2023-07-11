@@ -58,6 +58,7 @@ eyes = ["Dank Shades", "Happy", "Visor", "Monocle", "none", "Frown", "Powerful",
 EXAMPLE_NO = 1
 
 def callback_filter():
+    global filtered_frogs
     # 根据条件过滤人物
     filtered_frogs = [frog for frog in frog_data if
                       (not desired_satyears or frog["sat_year"]  in desired_satyears) and
@@ -76,7 +77,7 @@ def callback_filter():
         #st.image('https://ordiscan.com/content/'+str(frog["inscription_id"]), caption=frog["item_name"],width=576/2)
     
         # 定义每列的宽度
-        col_width = 8#column_value
+        col_width = column_value
             
         # 间距的像素值
         #spacing = 200  
@@ -253,3 +254,5 @@ if selected == "Filter":
     # 创建一个滑动条
     #column_value = st.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
         column_value = st.selectbox("Column display quantity", (1, 2, 3,4,5,6,7,8,9,10,11),label_visibility="hidden")
+    
+    
