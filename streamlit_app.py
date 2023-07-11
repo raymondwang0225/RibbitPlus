@@ -213,7 +213,7 @@ if selected == "Filter":
     
     with col_01:
     # 创建一个滑动条
-        column_value = st.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
+        column_value = st.slider("Column display quantity",help="Column display quantity", min_value=1, max_value=11, value=10, step=1,label_visibility="hidden")
         #column_value = st.selectbox("Column display quantity", (1, 2, 3,4,5,6,7,8,9,10,11), index=9,label_visibility="hidden")
     
     #col_03,col_04 = st.columns([1,1])
