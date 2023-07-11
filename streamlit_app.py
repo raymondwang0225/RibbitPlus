@@ -207,19 +207,19 @@ if selected == "Filter":
             desired_eyes = st.multiselect("Eyes", eyes, key="multiselect_eyes")
 
     
-    col_01,col_02,col_03,col_04 = st.columns([1,1,1,1])
-    with col_01:
-        sort_select = st.selectbox("Column display quantity", ("None","Inscription #: Low to High", "Inscription #: High to Low", "Sat blocktime #: Low to High","Sat blocktime #: High to Low"),label_visibility="hidden")
+    col_01,col_02,col_03 = st.columns([2,1,1])
+    #with col_01:
+        #sort_select = st.selectbox("Column display quantity", ("None","Inscription #: Low to High", "Inscription #: High to Low", "Sat blocktime #: Low to High","Sat blocktime #: High to Low"),label_visibility="hidden")
     
-    with col_02:
+    with col_01:
     # 创建一个滑动条
-    #column_value = st.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
-        column_value = st.selectbox("Column display quantity", (1, 2, 3,4,5,6,7,8,9,10,11), index=9,label_visibility="hidden")
+        column_value = st.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
+        #column_value = st.selectbox("Column display quantity", (1, 2, 3,4,5,6,7,8,9,10,11), index=9,label_visibility="hidden")
     
     #col_03,col_04 = st.columns([1,1])
-    with col_03:
+    with col_02:
         clear_filter = st.button("Clear Filter", on_click=clear_multi,use_container_width=True)
-    with col_04:
+    with col_03:
     # "Apply Filter" 按钮
         apply_filter = st.button("Apply Filter",use_container_width=True)   
    
