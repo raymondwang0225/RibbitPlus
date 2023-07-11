@@ -5,6 +5,13 @@ import plost
 import json;
 
 
+def clear_multi():
+    st.session_state.multiselect_backgrounds = []
+    st.session_state.multiselect_clothing = []
+    st.session_state.multiselect_bodies = []
+    st.session_state.multiselect_mouths = []
+    st.session_state.multiselect_eyes = []
+    return
 
 
 with open('bitcoin_frogs_items.json') as f:
@@ -184,20 +191,20 @@ if selected == "Filter":
         col1, col2 ,col3, col4 , col5 ,col6 = st.columns([0.75,1,1,1,1,1])
     
         with col1:
-            desired_satyears = st.multiselect("Sat Year", satyears)
+            desired_satyears = st.multiselect("Sat Year", satyears, key="multiselect_satyears")
         
         
         with col2:
         # 应用过滤器并获取最终结果
-            desired_backgrounds = st.multiselect("Background", backgrounds)
+            desired_backgrounds = st.multiselect("Background", backgrounds, key="multiselect_backgrounds")
         with col3:
-            desired_clothing = st.multiselect("Clothing", clothing)
+            desired_clothing = st.multiselect("Clothing", clothing, key="multiselect_clothing")
         with col4:
-            desired_bodies = st.multiselect("Body", bodies)
+            desired_bodies = st.multiselect("Body", bodies, key="multiselect_bodies")
         with col5:
-            desired_mouths = st.multiselect("Mouth", mouths)
+            desired_mouths = st.multiselect("Mouth", mouths, key="multiselect_mouths")
         with col6:
-            desired_eyes = st.multiselect("Eyes", eyes)
+            desired_eyes = st.multiselect("Eyes", eyes, key="multiselect_eyes")
 
     
     col_01,col_02 = st.columns([5,5])
@@ -211,10 +218,11 @@ if selected == "Filter":
     
     
 
-            
+    clear_filter = st.button("Clear Filter", on_click=clear_multi)
+   
     # "Apply Filter" 按钮
     apply_filter = st.button("Apply Filter")   
-
+    
     if apply_filter:
             # 根据条件过滤人物
             filtered_frogs = [frog for frog in frog_data if
