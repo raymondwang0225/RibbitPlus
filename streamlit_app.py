@@ -224,7 +224,7 @@ if selected == "Filter":
         col1, col2 ,col3, col4 , col5 ,col6 = st.columns([0.75,1,1,1,1,1])
     
         with col1:
-            desired_satyears = st.multiselect("Sat Year", satyears)
+            desired_satyears = st.multiselect("Sat Year", satyears,on_change= callback_filter)
         
         
         with col2:
