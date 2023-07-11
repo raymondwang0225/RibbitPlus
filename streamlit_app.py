@@ -209,7 +209,7 @@ if selected == "Filter":
 
     column_value = st.slider("Column display quantity",help="Column display quantity", min_value=1, max_value=11, value=10, step=1)
     
-    col_01,col_02,col_03 = st.columns([2,1,1])
+    col_01,col_02,col_03 = st.columns([4,1,1])
     #with col_01:
         #sort_select = st.selectbox("Column display quantity", ("None","Inscription #: Low to High", "Inscription #: High to Low", "Sat blocktime #: Low to High","Sat blocktime #: High to Low"),label_visibility="hidden")
     
