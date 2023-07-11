@@ -76,7 +76,7 @@ def callback_filter():
         #st.image('https://ordiscan.com/content/'+str(frog["inscription_id"]), caption=frog["item_name"],width=576/2)
     
         # 定义每列的宽度
-        col_width = column_value
+        col_width = 8#column_value
             
         # 间距的像素值
         #spacing = 200  
