@@ -218,10 +218,10 @@ if selected == "Filter":
     
     col_03,col_04 = st.columns([1,1])
     with col_03:
-        clear_filter = st.button("Clear Filter", on_click=clear_multi)
+        clear_filter = st.button("Clear Filter", on_click=clear_multi,use_container_width=True)
     with col_04:
     # "Apply Filter" 按钮
-        apply_filter = st.button("Apply Filter")   
+        apply_filter = st.button("Apply Filter",use_container_width=True)   
    
    
     
