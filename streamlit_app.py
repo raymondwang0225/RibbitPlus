@@ -199,10 +199,25 @@ if selected == "Filter":
         with col6:
             desired_eyes = st.multiselect("Eyes", eyes)
 
+    
+    col_01,col_02,col_03 = st.columns([5,1,1])
+    with col_01:
+        text_input = st.text_input(
+        "Enter some text 👇",
+        label_visibility="hidden",
+        disabled=st.session_state.disabled,
+        placeholder="Search by name or trait",)
         
+    with col_02:
+        sort_select = st.selectbox("Column display quantity", ("None","Inscription #: Low to High", "Inscription #: High to Low", "Sat blocktime #: Low to High","Sat blocktime #: High to Low"),label_visibility="hidden")
+    
+    with col_03:
     # 创建一个滑动条
     #column_value = st.slider("Column display quantity", min_value=1, max_value=11, value=10, step=1)
-    column_value = st.selectbox("Column display quantity", (1, 2, 3,4,5,6,7,8,9,10,11))
+        column_value = st.selectbox("Column display quantity", (1, 2, 3,4,5,6,7,8,9,10,11))
+    
+    
+
             
     # "Apply Filter" 按钮
     apply_filter = st.button("Apply Filter")   
