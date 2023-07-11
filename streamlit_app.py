@@ -200,7 +200,7 @@ if selected == "Filter":
             desired_eyes = st.multiselect("Eyes", eyes)
 
     
-    col_01,col_02,col_03 = st.columns([5,5])
+    col_01,col_02 = st.columns([5,5])
     with col_01:
         sort_select = st.selectbox("Column display quantity", ("None","Inscription #: Low to High", "Inscription #: High to Low", "Sat blocktime #: Low to High","Sat blocktime #: High to Low"),label_visibility="hidden")
     
