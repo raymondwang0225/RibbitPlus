@@ -187,24 +187,24 @@ if selected == "Filter":
 
     st.title("Filter")
     #st.markdown("<hr/>", unsafe_allow_html = True)
-    with st.expander("Condition",True):
-        col1, col2 ,col3, col4 , col5 ,col6 = st.columns([0.75,1,1,1,1,1])
+    #with st.expander("Condition",True):
+    col1, col2 ,col3, col4 , col5 ,col6 = st.columns([0.75,1,1,1,1,1])
+
+    with col1:
+        desired_satyears = st.multiselect("Sat Year", satyears, key="multiselect_satyears")
     
-        with col1:
-            desired_satyears = st.multiselect("Sat Year", satyears, key="multiselect_satyears")
-        
-        
-        with col2:
-        # 应用过滤器并获取最终结果
-            desired_backgrounds = st.multiselect("Background", backgrounds, key="multiselect_backgrounds")
-        with col3:
-            desired_clothing = st.multiselect("Clothing", clothing, key="multiselect_clothing")
-        with col4:
-            desired_bodies = st.multiselect("Body", bodies, key="multiselect_bodies")
-        with col5:
-            desired_mouths = st.multiselect("Mouth", mouths, key="multiselect_mouths")
-        with col6:
-            desired_eyes = st.multiselect("Eyes", eyes, key="multiselect_eyes")
+    
+    with col2:
+    # 应用过滤器并获取最终结果
+        desired_backgrounds = st.multiselect("Background", backgrounds, key="multiselect_backgrounds")
+    with col3:
+        desired_clothing = st.multiselect("Clothing", clothing, key="multiselect_clothing")
+    with col4:
+        desired_bodies = st.multiselect("Body", bodies, key="multiselect_bodies")
+    with col5:
+        desired_mouths = st.multiselect("Mouth", mouths, key="multiselect_mouths")
+    with col6:
+        desired_eyes = st.multiselect("Eyes", eyes, key="multiselect_eyes")
 
 
     column_value = st.slider("Column display quantity",help="Column display quantity", min_value=1, max_value=11, value=10, step=1)
