@@ -186,8 +186,37 @@ if selected == "Data":
     #st.title(f"You have selected {selected}")
 
 
-    with open('past_7_days.json') as f:
-        past_7_days = json.load(f)
+    
+    past_7_days = [
+      {
+        "time": "2023-07-18",
+        "value": 0.3162,
+      },
+      {
+        "time": "2023-07-17",
+        "value": 0.3480,
+      },
+      {
+        "time": "2023-07-16",
+        "value": 0.3732,
+      },
+      {
+        "time": "2023-07-15",
+        "value": 0.3696,
+      },
+      {
+        "time": "2023-07-14",
+        "value": 0.3788,
+      },
+      {
+        "time": "2023-07-13",
+        "value": 0.3795,
+      },
+      {
+        "time": "2023-07-12",
+        "value": 0.3121,
+      }
+    ]
 
     priceVolumeChartOptions = {
         "height": 400,
