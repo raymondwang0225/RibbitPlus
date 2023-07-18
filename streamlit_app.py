@@ -355,9 +355,9 @@ if selected == "Data":
             "type": 'Area',
             "data": priceVolumeSeriesArea,
             "options": {
-                "topColor": 'rgba(38,198,218, 0.56)',
-                "bottomColor": 'rgba(38,198,218, 0.04)',
-                "lineColor": 'rgba(38,198,218, 1)',
+                "topColor": 'rgba(75,132,255, 0.56)',
+                "bottomColor": 'rgba(75,132,255, 0.04)',
+                "lineColor": 'rgba(75,132,255, 1)',
                 "lineWidth": 2,
             }
         },
