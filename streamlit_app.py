@@ -317,6 +317,9 @@ if selected == "Data":
 
     priceVolumeChartOptions = {
         "height": 400,
+        "localization": { 
+            "dateFormat": "yyyy-MM-dd",
+            },
         "rightPriceScale": {
             "scaleMargins": {
                 "top": 0.2,
