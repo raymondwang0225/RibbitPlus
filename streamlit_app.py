@@ -332,14 +332,14 @@ if selected == "Data":
             },
         "rightPriceScale": {
             "scaleMargins": {
-                "top": 0.002,
+                "top": 0.2,
                 "bottom": 0,
             },
             "borderVisible": False,
         },
         "overlayPriceScales": {
             "scaleMargins": {
-                "top": 0.01,
+                "top": 0.7,
                 "bottom": 0,
             }
         },
@@ -363,7 +363,7 @@ if selected == "Data":
     priceVolumeSeries = [
         {
             "type": 'Area',
-            "data": past_30_days_avg_data,
+            "data": priceVolumeSeriesArea,
             "options": {
                 "topColor": 'rgba(75,132,255, 0.56)',
                 "bottomColor": 'rgba(75,132,255, 0.04)',
@@ -373,7 +373,7 @@ if selected == "Data":
         },
         {
             "type": 'Histogram',
-            "data": past_30_days_vol_data,
+            "data": priceVolumeSeriesHistogram,
             "options": {
                 "color": '#4b84ff',
                 "priceFormat": {
@@ -383,7 +383,7 @@ if selected == "Data":
             },
             "priceScale": {
                 "scaleMargins": {
-                    "top": 0.01,
+                    "top": 0.7,
                     "bottom": 0,
                 }
             }
