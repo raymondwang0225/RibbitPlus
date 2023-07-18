@@ -143,12 +143,9 @@ def clear_multi():
     return
 
 
-with open('past_30_days_avg.json') as f:
-    past_30_days_avg_data = json.load(f)
 
-with open('past_30_days_vol.json') as f:
-    past_30_days_vol_data = json.load(f)
-
+past_30_days_avg_data = json.loads('past_30_days_avg.json')
+past_30_days_vol_data = json.loads('past_30_days_vol.json')
 
 
 
