@@ -333,7 +333,7 @@ if selected == "Data":
         "layout": {
             "background": {
                 "type": 'solid',
-                "color": '#131722'
+                "color": '#000000'
             },
             "textColor": '#d1d4dc',
         },
@@ -362,7 +362,7 @@ if selected == "Data":
             "type": 'Histogram',
             "data": priceVolumeSeriesHistogram,
             "options": {
-                "color": '#26a69a',
+                "color": '#4b84ff',
                 "priceFormat": {
                     "type": 'volume',
                 },
