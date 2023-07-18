@@ -133,6 +133,10 @@ priceVolumeSeriesHistogram = [
     { "time": '2019-05-28', "value": 3097125.00, "color": 'rgba(0, 150, 136, 0.8)' }
 ]
 
+
+_avg=[{"time": "2023-07-18", "value": 0.032}, {"time": "2023-07-17", "value": 0.035}, {"time": "2023-07-16", "value": 0.037}, {"time": "2023-07-15", "value": 0.037}, {"time": "2023-07-14", "value": 0.038}, {"time": "2023-07-13", "value": 0.038}, {"time": "2023-07-12", "value": 0.031}, {"time": "2023-07-11", "value": 0.028}, {"time": "2023-07-10", "value": 0.027}, {"time": "2023-07-09", "value": 0.028}, {"time": "2023-07-08", "value": 0.028}, {"time": "2023-07-07", "value": 0.028}, {"time": "2023-07-06", "value": 0.031}, {"time": "2023-07-05", "value": 0.032}, {"time": "2023-07-04", "value": 0.031}, {"time": "2023-07-03", "value": 0.027}, {"time": "2023-07-02", "value": 0.033}, {"time": "2023-07-01", "value": 0.038}, {"time": "2023-06-30", "value": 0.04}, {"time": "2023-06-29", "value": 0.044}, {"time": "2023-06-28", "value": 0.036}, {"time": "2023-06-27", "value": 0.04}, {"time": "2023-06-26", "value": 0.043}, {"time": "2023-06-25", "value": 0.041}, {"time": "2023-06-24", "value": 0.047}, {"time": "2023-06-23", "value": 0.052}, {"time": "2023-06-22", "value": 0.049}, {"time": "2023-06-21", "value": 0.051}, {"time": "2023-06-20", "value": 0.054}, {"time": "2023-06-19", "value": 0.062}]
+_vol=[{"time": "2023-07-18", "value": 1.012, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-07-17", "value": 0.975, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-07-16", "value": 1.12, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-07-15", "value": 2.07, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-07-14", "value": 3.069, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-07-13", "value": 11.388, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-07-12", "value": 7.023, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-07-11", "value": 4.744, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-07-10", "value": 1.75, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-07-09", "value": 3.378, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-07-08", "value": 5.211, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-07-07", "value": 6.324, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-07-06", "value": 3.368, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-07-05", "value": 3.523, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-07-04", "value": 12.134, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-07-03", "value": 7.33, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-07-02", "value": 6.338, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-07-01", "value": 5.18, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-06-30", "value": 9.981, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-06-29", "value": 10.329, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-06-28", "value": 11.084, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-06-27", "value": 8.301, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-06-26", "value": 10.003, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-06-25", "value": 7.176, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-06-24", "value": 8.635, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-06-23", "value": 7.258, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-06-22", "value": 13.683, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-06-21", "value": 8.412, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-06-20", "value": 8.637, "color": "rgba(255, 255, 255, 0.8)"}, {"time": "2023-06-19", "value": 6.343, "color": "rgba(255, 255, 255, 0.8)"}]
+
 def clear_multi():
     st.session_state.multiselect_satyears = []
     st.session_state.multiselect_backgrounds = []
@@ -363,7 +367,7 @@ if selected == "Data":
     priceVolumeSeries = [
         {
             "type": 'Area',
-            "data": priceVolumeSeriesArea,
+            "data": _avg,
             "options": {
                 "topColor": 'rgba(75,132,255, 0.56)',
                 "bottomColor": 'rgba(75,132,255, 0.04)',
@@ -373,7 +377,7 @@ if selected == "Data":
         },
         {
             "type": 'Histogram',
-            "data": priceVolumeSeriesHistogram,
+            "data": _vol,
             "options": {
                 "color": '#4b84ff',
                 "priceFormat": {
