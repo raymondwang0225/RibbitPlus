@@ -246,6 +246,7 @@ if selected == "Data":
                 "priceFormat": {
                     "type": "price",
                     "precision": 3,
+                    "minMove": 0.001,
                 },
             }
         },
