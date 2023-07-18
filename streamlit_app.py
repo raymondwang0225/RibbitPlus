@@ -134,6 +134,23 @@ priceVolumeSeriesHistogram = [
 ]
 
 
+_avg = [
+    { "time": '2019-03-01', "value": 56.96 },
+    { "time": '2019-03-04', "value": 56.24 },
+    { "time": '2019-03-05', "value": 56.08 },
+    { "time": '2019-03-06', "value": 55.68 },
+    { "time": '2019-03-07', "value": 56.30 },
+    { "time": '2019-03-08', "value": 56.53 },
+]
+
+_vol = [
+    { "time": '2019-03-01', "value": 10942737.00, "color": "rgba(255, 255, 255, 0.8)" },
+    { "time": '2019-03-04', "value": 13674737.00, "color": "rgba(255, 255, 255, 0.8)" },
+    { "time": '2019-03-05', "value": 15749545.00, "color": "rgba(255, 255, 255, 0.8)" },
+    { "time": '2019-03-06', "value": 13935530.00, "color": "rgba(255, 255, 255, 0.8)" },
+    { "time": '2019-03-07', "value": 12644171.00, "color": "rgba(255, 255, 255, 0.8)" },
+    { "time": '2019-03-08', "value": 10646710.00, "color": "rgba(255, 255, 255, 0.8)" },
+]
 
 def clear_multi():
     st.session_state.multiselect_satyears = []
@@ -365,7 +382,7 @@ if selected == "Data":
     priceVolumeSeries = [
         {
             "type": 'Area',
-            "data": past_30_days_avg_data,
+            "data": _avg,
             "options": {
                 "topColor": 'rgba(75,132,255, 0.56)',
                 "bottomColor": 'rgba(75,132,255, 0.04)',
@@ -375,7 +392,7 @@ if selected == "Data":
         },
         {
             "type": 'Histogram',
-            "data": past_30_days_vol_data,
+            "data": _vol,
             "options": {
                 "color": '#4b84ff',
                 "priceFormat": {
