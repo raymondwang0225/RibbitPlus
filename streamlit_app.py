@@ -332,14 +332,14 @@ if selected == "Data":
             },
         "rightPriceScale": {
             "scaleMargins": {
-                "top": 0.2,
+                "top": 0.002,
                 "bottom": 0,
             },
             "borderVisible": False,
         },
         "overlayPriceScales": {
             "scaleMargins": {
-                "top": 0.7,
+                "top": 0.01,
                 "bottom": 0,
             }
         },
@@ -383,7 +383,7 @@ if selected == "Data":
             },
             "priceScale": {
                 "scaleMargins": {
-                    "top": 0.7,
+                    "top": 0.01,
                     "bottom": 0,
                 }
             }
