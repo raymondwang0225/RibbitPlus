@@ -333,7 +333,7 @@ if selected == "Data":
         "rightPriceScale": {
             "scaleMargins": {
                 "top": 0.2,
-                "bottom": 0.25,
+                "bottom": 0,
             },
             "borderVisible": False,
         },
