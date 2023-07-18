@@ -243,6 +243,10 @@ if selected == "Data":
                 "bottomColor": 'rgba(75,132,255, 0.04)',
                 "lineColor": 'rgba(75,132,255, 1)',
                 "lineWidth": 2,
+                "priceFormat": {
+                    "type": "price",
+                    "precision": 3,
+                },
             }
         },
         {
