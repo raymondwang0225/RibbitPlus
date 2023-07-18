@@ -187,7 +187,7 @@ if selected == "Data":
 
 
     
-    past_7_days = [
+    past_7_days_price = [
       {
         "time": "2023-07-18",
         "value": 0.3162,
@@ -215,6 +215,37 @@ if selected == "Data":
       {
         "time": "2023-07-12",
         "value": 0.3121,
+      }
+    ]
+
+    past_7_days_vol = [
+      {
+        "time": "2023-07-18",
+        "value": 0.101196642,
+      },
+      {
+        "time": "2023-07-17",
+        "value": 0.97458390,
+      },
+      {
+        "time": "2023-07-16",
+        "value": 1.11975692,
+      },
+      {
+        "time": "2023-07-15",
+        "value": 2.06988984,  
+      },
+      {
+        "time": "2023-07-14",
+        "value": 3.06903758,
+      },
+      {
+        "time": "2023-07-13",
+        "value": 11.38759595,
+      },
+      {
+        "time": "2023-07-12",
+        "value": 7.02310540,
       }
     ]
 
@@ -253,12 +284,29 @@ if selected == "Data":
     priceVolumeSeries = [
         {
             "type": 'Area',
-            "data": past_7_days,
+            "data": past_7_days_price,
             "options": {
                 "topColor": 'rgba(38,198,218, 0.56)',
                 "bottomColor": 'rgba(38,198,218, 0.04)',
                 "lineColor": 'rgba(38,198,218, 1)',
                 "lineWidth": 2,
+            }
+        },
+        {
+            "type": 'Histogram',
+            "data": past_7_days_vol,
+            "options": {
+                "color": '#26a69a',
+                "priceFormat": {
+                    "type": 'volume',
+                },
+                "priceScaleId": "" # set as an overlay setting,
+            },
+            "priceScale": {
+                "scaleMargins": {
+                    "top": 0.7,
+                    "bottom": 0,
+                }
             }
         }
     ]
