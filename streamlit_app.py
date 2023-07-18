@@ -231,23 +231,6 @@ if selected == "Data":
                 "lineColor": 'rgba(38,198,218, 1)',
                 "lineWidth": 2,
             }
-        },
-        {
-            "type": 'Histogram',
-            "data": past_7_days,
-            "options": {
-                "color": '#26a69a',
-                "priceFormat": {
-                    "type": 'volume',
-                },
-                "priceScaleId": "" # set as an overlay setting,
-            },
-            "priceScale": {
-                "scaleMargins": {
-                    "top": 0.7,
-                    "bottom": 0,
-                }
-            }
         }
     ]
     st.subheader("Price with Volume Series Chart sample")
