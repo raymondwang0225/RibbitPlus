@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+from streamlit_lightweight_charts import renderLightweightCharts
 import pandas as pd
 import plost
 import json;
@@ -183,6 +184,86 @@ if selected == "Data":
     with c6:
         st.metric(label="unique owners", value="44.12%")
     #st.title(f"You have selected {selected}")
+
+
+    with open('past_7_days.json') as f:
+        past_7_days = json.load(f)
+
+    priceVolumeChartOptions = {
+        "height": 400,
+        "rightPriceScale": {
+            "scaleMargins": {
+                "top": 0.2,
+                "bottom": 0.25,
+            },
+            "borderVisible": False,
+        },
+        "overlayPriceScales": {
+            "scaleMargins": {
+                "top": 0.7,
+                "bottom": 0,
+            }
+        },
+        "layout": {
+            "background": {
+                "type": 'solid',
+                "color": '#131722'
+            },
+            "textColor": '#d1d4dc',
+        },
+        "grid": {
+            "vertLines": {
+                "color": 'rgba(42, 46, 57, 0)',
+            },
+            "horzLines": {
+                "color": 'rgba(42, 46, 57, 0.6)',
+            }
+        }
+    }
+
+    priceVolumeSeries = [
+        {
+            "type": 'Area',
+            "data": past_7_days,
+            "options": {
+                "topColor": 'rgba(38,198,218, 0.56)',
+                "bottomColor": 'rgba(38,198,218, 0.04)',
+                "lineColor": 'rgba(38,198,218, 1)',
+                "lineWidth": 2,
+            }
+        },
+        {
+            "type": 'Histogram',
+            "data": past_7_days,
+            "options": {
+                "color": '#26a69a',
+                "priceFormat": {
+                    "type": 'volume',
+                },
+                "priceScaleId": "" # set as an overlay setting,
+            },
+            "priceScale": {
+                "scaleMargins": {
+                    "top": 0.7,
+                    "bottom": 0,
+                }
+            }
+        }
+    ]
+    st.subheader("Price with Volume Series Chart sample")
+
+    renderLightweightCharts([
+        {
+            "chart": priceVolumeChartOptions,
+            "series": priceVolumeSeries
+        }
+    ], 'priceAndVolume')
+
+
+
+
+
+
 if selected == "Filter":
     
 
@@ -270,5 +351,3 @@ if selected == "Filter":
                     # 顯示動態內容的標題
 
 
-
-   
