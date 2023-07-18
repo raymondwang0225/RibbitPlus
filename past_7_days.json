@@ -1,44 +1,30 @@
 [
   {
     "time": "2023-07-18 00:00",
-    "psbt_price_average": 3162395.0625,
-    "psbt_price_volume": 101196642,
-    "number_of_transactions": 32
+    "value": 3162395.0625,
   },
   {
     "time": "2023-07-17 00:00",
-    "psbt_price_average": 3480656.785714286,
-    "psbt_price_volume": 97458390,
-    "number_of_transactions": 28
+    "value": 3480656.785714286,
   },
   {
     "time": "2023-07-16 00:00",
-    "psbt_price_average": 3732523.066666667,
-    "psbt_price_volume": 111975692,
-    "number_of_transactions": 30
+    "pvalue": 3732523.066666667,
   },
   {
     "time": "2023-07-15 00:00",
-    "psbt_price_average": 3696231.8571428573,
-    "psbt_price_volume": 206988984,
-    "number_of_transactions": 56
+    "value": 3696231.8571428573,
   },
   {
     "time": "2023-07-14 00:00",
-    "psbt_price_average": 3788935.283950617,
-    "psbt_price_volume": 306903758,
-    "number_of_transactions": 81
+    "value": 3788935.283950617,
   },
   {
     "time": "2023-07-13 00:00",
-    "psbt_price_average": 3795865.316666667,
-    "psbt_price_volume": 1138759595,
-    "number_of_transactions": 300
+    "value": 3795865.316666667,
   },
   {
     "time": "2023-07-12 00:00",
-    "psbt_price_average": 3121380.177777778,
-    "psbt_price_volume": 702310540,
-    "number_of_transactions": 225
+    "value": 3121380.177777778,
   }
 ]
