@@ -268,7 +268,7 @@ if selected == "Data":
             }
         }
     ]
-    st.subheader("Price with Volume Series Chart sample")
+    st.subheader("Volume and Price")
 
     renderLightweightCharts([
         {
