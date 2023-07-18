@@ -16,13 +16,13 @@ def clear_multi():
     st.session_state.multiselect_eyes = []
     return
 
-past_30_days_avg_data =[]
-past_30_days_vol_data =[]
-with open('past_30_days_avg.json') as f:
-    past_30_days_avg_data = json.load(f)
+past_150_days_avg_data =[]
+past_150_days_vol_data =[]
+with open('past_150_days_avg.json') as f:
+    past_150_days_avg_data = json.load(f)
 
-with open('past_30_days_vol.json') as f:
-    past_30_days_vol_data = json.load(f)
+with open('past_150_days_vol.json') as f:
+    past_150_days_vol_data = json.load(f)
 
 
 
@@ -237,7 +237,7 @@ if selected == "Data":
     priceVolumeSeries = [
         {
             "type": 'Area',
-            "data": past_30_days_avg_data,
+            "data": past_150_days_avg_data,
             "options": {
                 "topColor": 'rgba(75,132,255, 0.56)',
                 "bottomColor": 'rgba(75,132,255, 0.04)',
@@ -252,7 +252,7 @@ if selected == "Data":
         },
         {
             "type": 'Histogram',
-            "data": past_30_days_vol_data,
+            "data": past_150_days_vol_data,
             "options": {
                 "color": '#4b84ff',
                 "priceFormat": {
