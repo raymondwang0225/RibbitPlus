@@ -143,6 +143,15 @@ def clear_multi():
     return
 
 
+with open('past_30_days_avg.json') as f:
+    past_30_days_avg_data = json.load(f)
+
+with open('past_30_days_vol.json') as f:
+    past_30_days_vol_data = json.load(f)
+
+
+
+
 with open('bitcoin_frogs_items.json') as f:
     frog_data = json.load(f)
 
@@ -353,7 +362,7 @@ if selected == "Data":
     priceVolumeSeries = [
         {
             "type": 'Area',
-            "data": priceVolumeSeriesArea,
+            "data": past_30_days_avg_data,
             "options": {
                 "topColor": 'rgba(75,132,255, 0.56)',
                 "bottomColor": 'rgba(75,132,255, 0.04)',
@@ -363,7 +372,7 @@ if selected == "Data":
         },
         {
             "type": 'Histogram',
-            "data": priceVolumeSeriesHistogram,
+            "data": past_30_days_vol_data,
             "options": {
                 "color": '#4b84ff',
                 "priceFormat": {
